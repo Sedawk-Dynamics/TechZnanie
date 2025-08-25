@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    
+    /* TechZnanie Brand Colors from Palette */
+    --tz-dark-navy: 240 100% 26%;     /* #040084 */
+    --tz-medium-blue: 218 96% 44%;    /* #0141CF */
+    --tz-light-blue: 207 75% 47%;     /* #1874D2 */
+    --tz-cream: 33 98% 80%;           /* #FECC98 */
+    --tz-bright-orange: 30 100% 49%;  /* #FD7F00 */
+    --tz-dark-orange: 24 100% 50%;    /* #FD6600 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Modern Button Styles */
+  .btn-primary {
+    @apply bg-tz-bright-orange hover:bg-tz-dark-orange text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-card hover:shadow-hover transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-tz-dark-navy border-2 border-tz-dark-navy hover:bg-tz-dark-navy hover:text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300;
+  }
+
+  /* Modern Card Styles */
+  .card-modern {
+    @apply bg-white rounded-2xl shadow-card hover:shadow-hover transition-all duration-300 border border-gray-100;
+  }
+
+  .card-feature {
+    @apply card-modern p-8 hover:scale-105 transform transition-all duration-300;
+  }
+
+  /* Modern Layout Utilities */
+  .container-modern {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+
+  /* Responsive Grid */
+  .grid-responsive {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+
+  /* Modern Form Styles */
+  .form-input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-tz-bright-orange focus:border-tz-bright-orange transition-all duration-300;
+  }
+
+  .form-textarea {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-tz-bright-orange focus:border-tz-bright-orange transition-all duration-300 resize-none;
+  }
+
+  /* Text Gradient */
+  .text-gradient {
+    @apply bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange bg-clip-text text-transparent;
+  }
+}
+
+/* Brand Color Classes */
+.bg-tz-dark-navy { background-color: hsl(var(--tz-dark-navy)); }
+.bg-tz-medium-blue { background-color: hsl(var(--tz-medium-blue)); }
+.bg-tz-light-blue { background-color: hsl(var(--tz-light-blue)); }
+.bg-tz-cream { background-color: hsl(var(--tz-cream)); }
+.bg-tz-bright-orange { background-color: hsl(var(--tz-bright-orange)); }
+.bg-tz-dark-orange { background-color: hsl(var(--tz-dark-orange)); }
+
+.text-tz-dark-navy { color: hsl(var(--tz-dark-navy)); }
+.text-tz-medium-blue { color: hsl(var(--tz-medium-blue)); }
+.text-tz-light-blue { color: hsl(var(--tz-light-blue)); }
+.text-tz-cream { color: hsl(var(--tz-cream)); }
+.text-tz-bright-orange { color: hsl(var(--tz-bright-orange)); }
+.text-tz-dark-orange { color: hsl(var(--tz-dark-orange)); }
+
+.border-tz-dark-navy { border-color: hsl(var(--tz-dark-navy)); }
+.border-tz-medium-blue { border-color: hsl(var(--tz-medium-blue)); }
+.border-tz-light-blue { border-color: hsl(var(--tz-light-blue)); }
+.border-tz-cream { border-color: hsl(var(--tz-cream)); }
+.border-tz-bright-orange { border-color: hsl(var(--tz-bright-orange)); }
+.border-tz-dark-orange { border-color: hsl(var(--tz-dark-orange)); }
+
+/* Modern Gradient Classes */
+.gradient-primary {
+  background: linear-gradient(135deg, hsl(var(--tz-dark-navy)) 0%, hsl(var(--tz-medium-blue)) 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, hsl(var(--tz-bright-orange)) 0%, hsl(var(--tz-dark-orange)) 100%);
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, hsl(var(--tz-dark-navy)) 0%, hsl(var(--tz-light-blue)) 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* Modern Shadows */
+.shadow-modern {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-card {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Modern Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(253, 127, 0, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(253, 127, 0, 0.6); }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #FD7F00 0%, #FD6600 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #FD6600 0%, #FD7F00 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
