@@ -12,7 +12,7 @@ export default function Footer() {
     { name: "About Us", href: "/about" },
     { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
-    { name: "Blog", href: "#" },
+    { name: "Blogs", href: "/blogs" },
   ]
 
   const programs = [

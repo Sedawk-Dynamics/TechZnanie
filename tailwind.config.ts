@@ -1,7 +1,12 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}", "*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -39,12 +44,12 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
         // TechZnanie Brand Colors
-        'tz-dark-navy': '#040084',
-        'tz-medium-blue': '#0141CF',
-        'tz-light-blue': '#1874D2',
-        'tz-cream': '#FECC98',
-        'tz-bright-orange': '#FD7F00',
-        'tz-dark-orange': '#FD6600',
+        "tz-dark-navy": "#040084",
+        "tz-medium-blue": "#0141CF",
+        "tz-light-blue": "#1874D2",
+        "tz-cream": "#FECC98",
+        "tz-bright-orange": "#FD7F00",
+        "tz-dark-orange": "#FD6600",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -61,39 +66,42 @@ const config: Config = {
           to: { height: "0" },
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' },
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
         },
-        'pulse-glow': {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(253, 127, 0, 0.3)' },
-          '50%': { boxShadow: '0 0 40px rgba(253, 127, 0, 0.6)' },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 20px rgba(253, 127, 0, 0.3)" },
+          "50%": { boxShadow: "0 0 40px rgba(253, 127, 0, 0.6)" },
         },
-        'slide-up': {
-          from: { transform: 'translateY(30px)', opacity: '0' },
-          to: { transform: 'translateY(0)', opacity: '1' },
+        "slide-up": {
+          from: { transform: "translateY(30px)", opacity: "0" },
+          to: { transform: "translateY(0)", opacity: "1" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         float: "float 6s ease-in-out infinite",
-        'pulse-glow': "pulse-glow 2s ease-in-out infinite",
-        'slide-up': "slide-up 0.6s ease-out",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "slide-up": "slide-up 0.6s ease-out",
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, #040084 0%, #0141CF 100%)',
-        'gradient-secondary': 'linear-gradient(135deg, #FD7F00 0%, #FD6600 100%)',
-        'gradient-hero': 'linear-gradient(135deg, #040084 0%, #1874D2 100%)',
-        'gradient-card': 'linear-gradient(145deg, #ffffff 0%, #f8fafc 100%)',
+        "gradient-primary": "linear-gradient(135deg, #040084 0%, #0141CF 100%)",
+        "gradient-secondary":
+          "linear-gradient(135deg, #FD7F00 0%, #FD6600 100%)",
+        "gradient-hero": "linear-gradient(135deg, #040084 0%, #1874D2 100%)",
+        "gradient-card": "linear-gradient(145deg, #ffffff 0%, #f8fafc 100%)",
       },
       boxShadow: {
-        'modern': '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-        'hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+        modern:
+          "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+        card: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+        hover:
+          "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+} satisfies Config;
 
-export default config
+export default config;

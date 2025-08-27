@@ -37,6 +37,7 @@ export default function Navbar() {
         { name: "Management & Business", href: "/course/management" },
       ],
     },
+    { name: "Blogs", href: "/blogs" },
   ]
 
   return (
