@@ -2347,7 +2347,15 @@ export default function CoursePage() {
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
-                        <Button className="w-full bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange hover:from-tz-dark-orange hover:to-tz-bright-orange text-white font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+                        <Button
+                          className="w-full bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange hover:from-tz-dark-orange hover:to-tz-bright-orange text-white font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                          onClick={() =>
+                            window.open(
+                              "https://lms.techznanieinnoversity.com/home/courses",
+                              "_blank"
+                            )
+                          }
+                        >
                           Enroll Now
                           <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </Button>

@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { ArrowRight, Star, Sparkles } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Navbar from "@/components/navbar"
-import Features from "@/components/features"
-import Footer from "@/components/footer"
+import { motion } from "framer-motion";
+import { ArrowRight, Star, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Navbar from "@/components/navbar";
+import Features from "@/components/features";
+import Footer from "@/components/footer";
 
 export default function AboutPage() {
   return (
@@ -63,10 +63,15 @@ export default function AboutPage() {
               <Sparkles className="w-5 h-5 text-yellow-400" />
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  <Star
+                    key={i}
+                    className="w-4 h-4 text-yellow-400 fill-current"
+                  />
                 ))}
               </div>
-              <span className="text-white font-semibold drop-shadow-sm">About TechZnanie</span>
+              <span className="text-white font-semibold drop-shadow-sm">
+                About TechZnanie
+              </span>
             </motion.div>
 
             {/* Main Heading */}
@@ -87,8 +92,9 @@ export default function AboutPage() {
               </h1>
 
               <p className="text-xl lg:text-2xl text-white/95 leading-relaxed max-w-3xl mx-auto drop-shadow-sm">
-                Discover our mission to transform careers through cutting-edge education, expert mentorship, and
-                industry-relevant skills development.
+                Discover our mission to transform careers through cutting-edge
+                education, expert mentorship, and industry-relevant skills
+                development.
               </p>
             </motion.div>
 
@@ -114,5 +120,5 @@ export default function AboutPage() {
       <Features />
       <Footer />
     </div>
-  )
+  );
 }

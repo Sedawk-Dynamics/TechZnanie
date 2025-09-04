@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { ArrowRight, Star, MessageCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Navbar from "@/components/navbar"
-import Contact from "@/components/contact"
-import Footer from "@/components/footer"
+import { motion } from "framer-motion";
+import { ArrowRight, Star, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Navbar from "@/components/navbar";
+import Contact from "@/components/contact";
+import Footer from "@/components/footer";
 
 export default function ContactPage() {
   return (
@@ -63,10 +63,15 @@ export default function ContactPage() {
               <MessageCircle className="w-5 h-5 text-yellow-400" />
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  <Star
+                    key={i}
+                    className="w-4 h-4 text-yellow-400 fill-current"
+                  />
                 ))}
               </div>
-              <span className="text-white font-semibold drop-shadow-sm">Get In Touch</span>
+              <span className="text-white font-semibold drop-shadow-sm">
+                Get In Touch
+              </span>
             </motion.div>
 
             {/* Main Heading */}
@@ -87,8 +92,8 @@ export default function ContactPage() {
               </h1>
 
               <p className="text-xl lg:text-2xl text-white/95 leading-relaxed max-w-3xl mx-auto drop-shadow-sm">
-                Ready to transform your career? Get in touch with our expert counselors and take the first step towards
-                your tech future.
+                Ready to transform your career? Get in touch with our expert
+                counselors and take the first step towards your tech future.
               </p>
             </motion.div>
 
@@ -114,5 +119,5 @@ export default function ContactPage() {
       <Contact />
       <Footer />
     </div>
-  )
+  );
 }

@@ -178,6 +178,9 @@ export default function Contact() {
             </motion.div>
           </motion.div>
 
+
+          
+
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
