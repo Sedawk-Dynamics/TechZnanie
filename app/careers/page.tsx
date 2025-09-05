@@ -383,9 +383,9 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Enhanced Job Openings */}
+      {/* Job Application Form */}
       <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -393,93 +393,363 @@ export default function CareersPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-tz-dark-navy mb-6">
-              Open Positions
+              Apply for a Position
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore exciting opportunities to grow your career with TechZnanie
+              Fill out the form below to submit your application to TechZnanie
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            {jobOpenings.map((job, index) => (
-              <motion.div
-                key={job.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-              >
-                <Card className="h-full hover:shadow-2xl transition-all duration-300 border-0 bg-gradient-to-br from-white to-gray-50/50 overflow-hidden group">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange"></div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Card className="shadow-xl border-0 bg-gradient-to-br from-white to-gray-50/50 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange"></div>
 
-                  <CardHeader className="relative">
-                    <div className="flex justify-between items-start mb-4">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-2">
-                          <CardTitle className="text-xl text-tz-dark-navy group-hover:text-tz-bright-orange transition-colors">
-                            {job.title}
-                          </CardTitle>
-                          {job.urgent && (
-                            <motion.div
-                              animate={{ scale: [1, 1.1, 1] }}
-                              transition={{ duration: 2, repeat: Infinity }}
-                            >
-                              <Badge className="bg-red-500 text-white text-xs">
-                                🔥 Urgent
-                              </Badge>
-                            </motion.div>
-                          )}
-                          {job.remote && (
-                            <Badge className="bg-green-500 text-white text-xs">
-                              🌍 Remote
-                            </Badge>
-                          )}
-                        </div>
-                        <CardDescription className="text-tz-bright-orange font-semibold text-lg">
-                          {job.department}
-                        </CardDescription>
+              <CardContent className="p-8">
+                <form
+                  className="space-y-6"
+                  onSubmit={(e) => e.preventDefault()}
+                >
+                  {/* Personal Information */}
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-tz-dark-navy flex items-center">
+                      <Users className="w-5 h-5 mr-2 text-tz-bright-orange" />
+                      Personal Information
+                    </h3>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {/* First Name */}
+                      <div className="space-y-2">
+                        <label
+                          htmlFor="firstName"
+                          className="block text-sm font-medium text-gray-700"
+                        >
+                          First Name <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="firstName"
+                          name="firstName"
+                          required
+                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                          placeholder="Enter your first name"
+                        />
                       </div>
-                      <Badge variant="outline" className="text-xs">
-                        {job.posted}
-                      </Badge>
+
+                      {/* Last Name */}
+                      <div className="space-y-2">
+                        <label
+                          htmlFor="lastName"
+                          className="block text-sm font-medium text-gray-700"
+                        >
+                          Last Name <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="lastName"
+                          name="lastName"
+                          required
+                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                          placeholder="Enter your last name"
+                        />
+                      </div>
                     </div>
 
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-4">
-                      <div className="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full">
-                        <MapPin className="w-4 h-4" />
-                        {job.location}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {/* Date of Birth */}
+                      <div className="space-y-2">
+                        <label
+                          htmlFor="dob"
+                          className="block text-sm font-medium text-gray-700"
+                        >
+                          Date of Birth <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="date"
+                          id="dob"
+                          name="dob"
+                          required
+                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                        />
                       </div>
-                      <div className="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full">
-                        <Clock className="w-4 h-4" />
-                        {job.type}
-                      </div>
-                      <div className="flex items-center gap-2 bg-tz-bright-orange/10 px-3 py-1 rounded-full text-tz-bright-orange font-semibold">
-                        <DollarSign className="w-4 h-4" />
-                        {job.salary}
+
+                      {/* Contact Number */}
+                      <div className="space-y-2">
+                        <label
+                          htmlFor="phone"
+                          className="block text-sm font-medium text-gray-700"
+                        >
+                          Contact Number <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          required
+                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                          placeholder="Enter your contact number"
+                        />
                       </div>
                     </div>
-                  </CardHeader>
 
-                  <CardContent>
-                    <p className="text-gray-700 mb-6 leading-relaxed">
-                      {job.description}
-                    </p>
+                    {/* Email */}
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-gray-700"
+                      >
+                        Email Address <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                        placeholder="Enter your email address"
+                      />
+                    </div>
+                  </div>
 
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-tz-dark-navy mb-3 flex items-center">
-                        <Star className="w-4 h-4 mr-2 text-tz-bright-orange" />
-                        Key Requirements:
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {job.requirements.map((req, reqIndex) => (
-                          <Badge
-                            key={reqIndex}
-                            variant="outline"
-                            className="text-xs hover:bg-tz-bright-orange hover:text-white transition-colors cursor-default"
-                          >
-                            {req}
-                          </Badge>
+                  {/* Education */}
+                  <div className="space-y-4 pt-4">
+                    <h3 className="text-xl font-bold text-tz-dark-navy flex items-center">
+                      <Building className="w-5 h-5 mr-2 text-tz-bright-orange" />
+                      Education
+                    </h3>
+
+                    {/* College/University */}
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="college"
+                        className="block text-sm font-medium text-gray-700"
+                      >
+                        College/University{" "}
+                        <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="college"
+                        name="college"
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                        placeholder="Enter your college/university name"
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {/* Degree */}
+                      <div className="space-y-2">
+                        <label
+                          htmlFor="degree"
+                          className="block text-sm font-medium text-gray-700"
+                        >
+                          Highest Degree <span className="text-red-500">*</span>
+                        </label>
+                        <select
+                          id="degree"
+                          name="degree"
+                          required
+                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                        >
+                          <option value="">Select your degree</option>
+                          <option value="Bachelors">Bachelor's Degree</option>
+                          <option value="Masters">Master's Degree</option>
+                          <option value="PhD">PhD</option>
+                          <option value="Diploma">Diploma</option>
+                          <option value="Other">Other</option>
+                        </select>
+                      </div>
+
+                      {/* Graduation Year */}
+                      <div className="space-y-2">
+                        <label
+                          htmlFor="graduationYear"
+                          className="block text-sm font-medium text-gray-700"
+                        >
+                          Graduation Year{" "}
+                          <span className="text-red-500">*</span>
+                        </label>
+                        <select
+                          id="graduationYear"
+                          name="graduationYear"
+                          required
+                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                        >
+                          <option value="">Select year</option>
+                          {Array.from(
+                            { length: 15 },
+                            (_, i) => new Date().getFullYear() - i
+                          ).map((year) => (
+                            <option key={year} value={year}>
+                              {year}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Professional Information */}
+                  <div className="space-y-4 pt-4">
+                    <h3 className="text-xl font-bold text-tz-dark-navy flex items-center">
+                      <Award className="w-5 h-5 mr-2 text-tz-bright-orange" />
+                      Professional Information
+                    </h3>
+
+                    {/* Position */}
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="position"
+                        className="block text-sm font-medium text-gray-700"
+                      >
+                        Position Applying For{" "}
+                        <span className="text-red-500">*</span>
+                      </label>
+                      <select
+                        id="position"
+                        name="position"
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                      >
+                        <option value="">Select a position</option>
+                        {jobOpenings.map((job) => (
+                          <option key={job.id} value={job.title}>
+                            {job.title} - {job.department}
+                          </option>
                         ))}
+                      </select>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {/* Experience */}
+                      <div className="space-y-2">
+                        <label
+                          htmlFor="experience"
+                          className="block text-sm font-medium text-gray-700"
+                        >
+                          Years of Experience{" "}
+                          <span className="text-red-500">*</span>
+                        </label>
+                        <select
+                          id="experience"
+                          name="experience"
+                          required
+                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                        >
+                          <option value="">Select experience</option>
+                          <option value="0-1">0-1 years</option>
+                          <option value="1-2">1-2 years</option>
+                          <option value="2-3">2-3 years</option>
+                          <option value="3-5">3-5 years</option>
+                          <option value="5+">5+ years</option>
+                        </select>
+                      </div>
+
+                      {/* Current/Expected Salary */}
+                      <div className="space-y-2">
+                        <label
+                          htmlFor="salary"
+                          className="block text-sm font-medium text-gray-700"
+                        >
+                          Expected Salary (₹ LPA)
+                        </label>
+                        <input
+                          type="text"
+                          id="salary"
+                          name="salary"
+                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                          placeholder="Enter your expected salary"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Resume Upload */}
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="resume"
+                        className="block text-sm font-medium text-gray-700"
+                      >
+                        Upload Resume <span className="text-red-500">*</span>
+                      </label>
+                      <div className="border-2 border-dashed border-gray-300 rounded-lg px-6 py-8 text-center hover:border-tz-bright-orange transition-colors">
+                        <input
+                          type="file"
+                          id="resume"
+                          name="resume"
+                          accept=".pdf,.doc,.docx"
+                          required
+                          className="hidden"
+                        />
+                        <label htmlFor="resume" className="cursor-pointer">
+                          <div className="flex flex-col items-center justify-center space-y-2">
+                            <div className="w-12 h-12 bg-tz-bright-orange/10 rounded-full flex items-center justify-center">
+                              <ArrowRight className="w-6 h-6 text-tz-bright-orange transform rotate-90" />
+                            </div>
+                            <span className="font-medium text-tz-bright-orange">
+                              Click to upload your resume
+                            </span>
+                            <span className="text-sm text-gray-500">
+                              PDF, DOC, or DOCX (Max 2MB)
+                            </span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+
+                    {/* Cover Letter */}
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="coverLetter"
+                        className="block text-sm font-medium text-gray-700"
+                      >
+                        Cover Letter
+                      </label>
+                      <textarea
+                        id="coverLetter"
+                        name="coverLetter"
+                        rows={4}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                        placeholder="Tell us why you're interested in this position and why you'd be a great fit"
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  {/* Terms & Submit */}
+                  <div className="pt-4 space-y-6">
+                    <div className="flex items-start">
+                      <div className="flex items-center h-5">
+                        <input
+                          id="terms"
+                          name="terms"
+                          type="checkbox"
+                          required
+                          className="w-4 h-4 text-tz-bright-orange border-gray-300 rounded focus:ring-tz-bright-orange"
+                        />
+                      </div>
+                      <div className="ml-3 text-sm">
+                        <label
+                          htmlFor="terms"
+                          className="font-medium text-gray-700"
+                        >
+                          I agree to the{" "}
+                          <a
+                            href="#"
+                            className="text-tz-bright-orange hover:underline"
+                          >
+                            Terms and Conditions
+                          </a>{" "}
+                          and{" "}
+                          <a
+                            href="#"
+                            className="text-tz-bright-orange hover:underline"
+                          >
+                            Privacy Policy
+                          </a>
+                        </label>
                       </div>
                     </div>
 
@@ -487,16 +757,16 @@ export default function CareersPage() {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      <Button className="w-full bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange hover:from-tz-dark-orange hover:to-tz-bright-orange text-white font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                        Apply Now
-                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      <Button className="w-full bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange hover:from-tz-dark-orange hover:to-tz-bright-orange text-white font-bold py-5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-lg">
+                        Submit Application
+                        <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
                     </motion.div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+                  </div>
+                </form>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
       </section>
 
