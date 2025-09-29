@@ -54,6 +54,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹25,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/full-stack-web-development/2",
         image:
           "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80",
         skills: [
@@ -84,6 +85,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹28,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/mobile-app-development/3",
         image:
           "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -114,6 +116,7 @@ const domainCourses = {
         level: "Beginner",
         price: "₹21,999",
         originalPrice: "₹28,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/data-structures-algorithms/4",
         image:
           "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -144,6 +147,7 @@ const domainCourses = {
         level: "Beginner",
         price: "₹21,999",
         originalPrice: "₹25,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/database-management-sql/5",
         image:
           "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1421&q=80",
         skills: [
@@ -174,6 +178,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹29,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/operating-systems-computer-networks/6",
         image:
           "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1434&q=80",
         skills: [
@@ -205,6 +210,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹29,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/data-science-machine-learning/7",
         image:
           "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -235,6 +241,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹28,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/artificial-intelligence/8",
         image:
           "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -265,6 +272,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹27,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/cloud-computing-aws-azure-gcp/9",
         image:
           "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80",
         skills: ["AWS", "Azure", "GCP", "Docker", "Kubernetes", "Terraform"],
@@ -288,6 +296,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹26,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/cybersecurity-ethical-hacking/10",
         image:
           "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -318,6 +327,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹24,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/devops-engineering/11",
         image:
           "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1488&q=80",
         skills: [
@@ -348,6 +358,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹27,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/blockchain-development/12",
         image:
           "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80",
         skills: [
@@ -378,6 +389,7 @@ const domainCourses = {
         level: "Beginner",
         price: "₹21,999",
         originalPrice: "₹25,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/ui-ux-design/13",
         image:
           "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1464&q=80",
         skills: [
@@ -408,6 +420,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹22,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/software-testing-automation/14",
         image:
           "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -451,6 +464,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹27,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/digital-electronics-vlsi-design/15",
         image:
           "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1425&q=80",
         skills: [
@@ -481,6 +495,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹26,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/embedded-systems-amp-microcontrollers/16",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: ["8051", "AVR", "PIC", "Arduino", "Raspberry Pi", "C/C++"],
@@ -504,6 +519,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹27,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/analog-electronics-amp-circuit-design/17",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -534,6 +550,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹32,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/signal-processing/18",
         image:
           "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -565,6 +582,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹26,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/internet-of-things-iot/19",
         image:
           "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -595,6 +613,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹28,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/wireless-communication-5g-lte/20",
         image:
           "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -625,6 +644,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹27,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/robotics-amp-automation/21",
         image:
           "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -655,6 +675,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹24,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/fpga-programming-verilog-vhdl/22",
         image:
           "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1425&q=80",
         skills: [
@@ -685,6 +706,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹28,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/matlab-simulink-applications/23",
         image:
           "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -715,6 +737,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹32,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/pcb-design-fabrication/24",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -758,6 +781,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹26,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/electrical-machines-power-systems/25",
         image:
           "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -788,6 +812,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹23,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/control-systems/26",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -818,6 +843,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹24,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/power-electronics/27",
         image:
           "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -848,6 +874,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹29,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/circuit-theory-analysis/28",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -879,6 +906,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹28,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/smart-grids/29",
         image:
           "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -909,6 +937,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹26,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/renewable-energy-systems/30",
         image:
           "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -939,6 +968,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹23,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/plc-scada/31",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -969,6 +999,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹27,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/electric-vehicles-ev-technology/32",
         image:
           "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80",
         skills: [
@@ -999,6 +1030,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹24,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/industrial-automation/33",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1042,6 +1074,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹28,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/thermodynamics-heat-transfer/34",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1072,6 +1105,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹28,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/fluid-mechanics/35",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1102,6 +1136,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹23,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/manufacturing-processes/36",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1132,6 +1167,7 @@ const domainCourses = {
         level: "Beginner",
         price: "₹21,999",
         originalPrice: "₹27,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/engineering-drawing-cad/37",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1163,6 +1199,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹29,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/autocad-solidworks-catia-ansys/38",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: ["AutoCAD", "SolidWorks", "CATIA", "ANSYS", "FEA", "CFD"],
@@ -1186,6 +1223,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹28,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/robotics-mechatronics/39",
         image:
           "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1216,6 +1254,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹24,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/hvac-systems/40",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1246,6 +1285,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹26,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/3d-printing-additive-manufacturing/41",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1276,6 +1316,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹23,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/cnc-programming/42",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1306,6 +1347,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹24,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/industrial-engineering/43",
         image:
           "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1349,6 +1391,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹26,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/structural-engineering/44",
         image:
           "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1379,6 +1422,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹25,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/transportation-engineering/45",
         image:
           "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1409,6 +1453,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹24,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/geotechnical-engineering/46",
         image:
           "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1439,6 +1484,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹29,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/surveying-estimation/47",
         image:
           "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1470,6 +1516,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹29,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/autocad-civil-3d-staad-pro-revit/48",
         image:
           "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1500,6 +1547,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹24,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/construction-project-management/49",
         image:
           "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1530,6 +1578,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹23,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/environmental-engineering/50",
         image:
           "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1560,6 +1609,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹27,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/smart-cities-infrastructure/51",
         image:
           "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1590,6 +1640,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹28,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/gis-remote-sensing/52",
         image:
           "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         skills: [
@@ -1632,6 +1683,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹25,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/project-management/53",
         image:
           "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80",
         skills: [
@@ -1662,6 +1714,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹22,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/business-analytics/54",
         image:
           "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80",
         skills: [
@@ -1692,6 +1745,7 @@ const domainCourses = {
         level: "Beginner",
         price: "₹21,999",
         originalPrice: "₹29,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/digital-marketing-seo-sem-google-ads/55",
         image:
           "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80",
         skills: [
@@ -1722,6 +1776,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹26,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/product-management/56",
         image:
           "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80",
         skills: [
@@ -1752,6 +1807,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹28,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/human-resource-management-hrm/57",
         image:
           "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80",
         skills: [
@@ -1782,6 +1838,7 @@ const domainCourses = {
         level: "Advanced",
         price: "₹21,999",
         originalPrice: "₹24,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/operations-amp-supply-chain-management/58",
         image:
           "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80",
         skills: [
@@ -1812,6 +1869,7 @@ const domainCourses = {
         level: "Intermediate",
         price: "₹21,999",
         originalPrice: "₹26,999",
+        link: "https://lms.techznanieinnoversity.com/home/course/finance-accounting/59",
         image:
           "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80",
         skills: [
@@ -2347,18 +2405,9 @@ export default function CoursePage() {
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
-                        <Button
-                          className="w-full bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange hover:from-tz-dark-orange hover:to-tz-bright-orange text-white font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                          onClick={() =>
-                            window.open(
-                              "https://lms.techznanieinnoversity.com/home/courses",
-                              "_blank"
-                            )
-                          }
-                        >
-                          Enroll Now
-                          <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </Button>
+                        <Link href={course.link} target="_blank">
+  <Button>Enroll Now</Button>
+</Link>
                       </motion.div>
                     </div>
                   </CardContent>
