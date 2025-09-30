@@ -34,10 +34,10 @@ export default function Footer() {
   ]
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook", color: "hover:bg-blue-600" },
-    { icon: Twitter, href: "#", label: "Twitter", color: "hover:bg-blue-400" },
-    { icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:bg-blue-700" },
-    { icon: Instagram, href: "#", label: "Instagram", color: "hover:bg-pink-600" },
+    { icon: Facebook, href: "https://www.facebook.com/techznanie", label: "Facebook", color: "hover:bg-blue-600" },
+    { icon: Twitter, href: "https://x.com/TechZnanie", label: "Twitter", color: "hover:bg-blue-400" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/techznanie/", label: "LinkedIn", color: "hover:bg-blue-700" },
+    { icon: Instagram, href: "https://www.instagram.com/techznanie/", label: "Instagram", color: "hover:bg-pink-600" },
     { icon: Youtube, href: "#", label: "YouTube", color: "hover:bg-red-600" },
   ]
 
