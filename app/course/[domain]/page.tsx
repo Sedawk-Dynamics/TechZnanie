@@ -48,7 +48,7 @@ const domainCourses = {
         title: "Full Stack Web Development",
         description:
           "Master frontend, backend, and full-stack development with React, Node.js, and modern frameworks. Build complete web applications from scratch.",
-        duration: "6 months",
+        duration: "3 months",
         students: "3,500+",
         rating: 4.8,
         level: "Intermediate",
@@ -78,7 +78,7 @@ const domainCourses = {
         title: "Mobile App Development",
         description:
           "Build native Android, iOS apps and cross-platform applications using Flutter. Learn complete mobile development lifecycle.",
-        duration: "5 months",
+        duration: "3 months",
         students: "2,200+",
         rating: 4.7,
         level: "Intermediate",
@@ -108,7 +108,7 @@ const domainCourses = {
         title: "Data Structures & Algorithms",
         description:
           "Master fundamental programming concepts, problem-solving techniques, and competitive programming skills.",
-        duration: "4 months",
+        duration: "3 months",
         students: "4,100+",
         rating: 4.6,
         level: "Beginner",
@@ -168,7 +168,7 @@ const domainCourses = {
         title: "Operating Systems & Computer Networks",
         description:
           "Understand OS concepts, network protocols, system administration, and network security fundamentals.",
-        duration: "4 months",
+        duration: "3 months",
         students: "1,900+",
         rating: 4.4,
         level: "Intermediate",
@@ -199,7 +199,7 @@ const domainCourses = {
         title: "Data Science & Machine Learning",
         description:
           "Learn Python, statistics, ML algorithms, and AI applications with hands-on projects using real industry datasets.",
-        duration: "8 months",
+        duration: "3 months",
         students: "2,100+",
         rating: 4.9,
         level: "Advanced",
@@ -229,7 +229,7 @@ const domainCourses = {
         title: "Artificial Intelligence",
         description:
           "Explore AI concepts, neural networks, computer vision, NLP, and build intelligent applications.",
-        duration: "7 months",
+        duration: "3 months",
         students: "1,600+",
         rating: 4.8,
         level: "Advanced",
@@ -259,7 +259,7 @@ const domainCourses = {
         title: "Cloud Computing (AWS, Azure, GCP)",
         description:
           "Master cloud platforms, DevOps practices, and scalable application deployment on major cloud providers.",
-        duration: "6 months",
+        duration: "3 months",
         students: "1,800+",
         rating: 4.7,
         level: "Advanced",
@@ -282,7 +282,7 @@ const domainCourses = {
         title: "Cybersecurity & Ethical Hacking",
         description:
           "Learn cybersecurity fundamentals, ethical hacking techniques, and security assessment methodologies.",
-        duration: "6 months",
+        duration: "3 months",
         students: "1,400+",
         rating: 4.6,
         level: "Advanced",
@@ -312,7 +312,7 @@ const domainCourses = {
         title: "DevOps Engineering",
         description:
           "Master CI/CD pipelines, containerization, infrastructure automation, and modern DevOps practices.",
-        duration: "5 months",
+        duration: "3 months",
         students: "1,300+",
         rating: 4.7,
         level: "Advanced",
@@ -342,7 +342,7 @@ const domainCourses = {
         title: "Blockchain Development",
         description:
           "Learn blockchain technology, smart contracts, cryptocurrency, and decentralized application development.",
-        duration: "5 months",
+        duration: "3 months",
         students: "900+",
         rating: 4.5,
         level: "Advanced",
@@ -372,7 +372,7 @@ const domainCourses = {
         title: "UI/UX Design",
         description:
           "Master user interface and user experience design principles, tools, and create stunning digital experiences.",
-        duration: "4 months",
+        duration: "3 months",
         students: "2,000+",
         rating: 4.6,
         level: "Beginner",
@@ -402,7 +402,7 @@ const domainCourses = {
         title: "Software Testing & Automation",
         description:
           "Learn manual and automated testing techniques, testing frameworks, and quality assurance practices.",
-        duration: "4 months",
+        duration: "3 months",
         students: "1,500+",
         rating: 4.4,
         level: "Intermediate",
@@ -445,7 +445,7 @@ const domainCourses = {
         title: "Digital Electronics & VLSI Design",
         description:
           "Master digital circuit design, VLSI technology, and semiconductor device fundamentals with industry-standard tools.",
-        duration: "6 months",
+        duration: "3 months",
         students: "1,800+",
         rating: 4.8,
         level: "Advanced",
@@ -475,7 +475,7 @@ const domainCourses = {
         title: "Embedded Systems & Microcontrollers",
         description:
           "Learn 8051, AVR, PIC microcontrollers, embedded programming, and IoT device development.",
-        duration: "5 months",
+        duration: "3 months",
         students: "2,200+",
         rating: 4.7,
         level: "Intermediate",
@@ -498,7 +498,7 @@ const domainCourses = {
         title: "Analog Electronics & Circuit Design",
         description:
           "Master analog circuit analysis, design, and simulation using industry-standard tools and techniques.",
-        duration: "4 months",
+        duration: "3 months",
         students: "1,600+",
         rating: 4.5,
         level: "Intermediate",
@@ -528,7 +528,7 @@ const domainCourses = {
         title: "Signal Processing",
         description:
           "Learn digital signal processing, image processing, and audio processing with MATLAB and practical applications.",
-        duration: "4 months",
+        duration: "3 months",
         students: "1,200+",
         rating: 4.6,
         level: "Advanced",
@@ -559,7 +559,7 @@ const domainCourses = {
         title: "Internet of Things (IoT)",
         description:
           "Build connected devices, IoT applications, and smart systems using modern IoT platforms and protocols.",
-        duration: "5 months",
+        duration: "3 months",
         students: "2,000+",
         rating: 4.8,
         level: "Advanced",
@@ -589,7 +589,7 @@ const domainCourses = {
         title: "Wireless Communication (5G, LTE)",
         description:
           "Understand modern wireless technologies, 5G networks, and communication system design principles.",
-        duration: "6 months",
+        duration: "3 months",
         students: "1,100+",
         rating: 4.7,
         level: "Advanced",
@@ -619,7 +619,7 @@ const domainCourses = {
         title: "Robotics & Automation",
         description:
           "Design and program robots, automation systems, and intelligent machines for industrial applications.",
-        duration: "6 months",
+        duration: "3 months",
         students: "1,400+",
         rating: 4.6,
         level: "Advanced",
@@ -649,7 +649,7 @@ const domainCourses = {
         title: "FPGA Programming (Verilog/VHDL)",
         description:
           "Master FPGA development, hardware description languages, and digital system implementation.",
-        duration: "5 months",
+        duration: "3 months",
         students: "800+",
         rating: 4.5,
         level: "Advanced",
@@ -709,7 +709,7 @@ const domainCourses = {
         title: "PCB Design & Fabrication",
         description:
           "Master printed circuit board design, layout optimization, and manufacturing processes.",
-        duration: "4 months",
+        duration: "3 months",
         students: "1,000+",
         rating: 4.5,
         level: "Intermediate",
@@ -752,7 +752,7 @@ const domainCourses = {
         title: "Electrical Machines & Power Systems",
         description:
           "Master electrical machines, power generation, transmission, distribution, and grid systems analysis.",
-        duration: "6 months",
+        duration: "3 months",
         students: "1,500+",
         rating: 4.7,
         level: "Advanced",
@@ -782,7 +782,7 @@ const domainCourses = {
         title: "Control Systems",
         description:
           "Learn control theory, system modeling, PID controllers, and modern control techniques for industrial applications.",
-        duration: "5 months",
+        duration: "3 months",
         students: "1,200+",
         rating: 4.6,
         level: "Advanced",
@@ -812,7 +812,7 @@ const domainCourses = {
         title: "Power Electronics",
         description:
           "Master power semiconductor devices, converters, inverters, and power management systems.",
-        duration: "5 months",
+        duration: "3 months",
         students: "1,100+",
         rating: 4.5,
         level: "Advanced",
@@ -842,7 +842,7 @@ const domainCourses = {
         title: "Circuit Theory & Analysis",
         description:
           "Fundamental circuit analysis techniques, network theorems, and advanced circuit design principles.",
-        duration: "4 months",
+        duration: "3 months",
         students: "1,400+",
         rating: 4.4,
         level: "Intermediate",
@@ -873,7 +873,7 @@ const domainCourses = {
         title: "Smart Grids",
         description:
           "Learn modern smart grid technologies, renewable integration, and intelligent power distribution systems.",
-        duration: "6 months",
+        duration: "3 months",
         students: "900+",
         rating: 4.8,
         level: "Advanced",
@@ -903,7 +903,7 @@ const domainCourses = {
         title: "Renewable Energy Systems",
         description:
           "Master solar, wind, and other renewable energy technologies with system design and implementation.",
-        duration: "5 months",
+        duration: "3 months",
         students: "1,100+",
         rating: 4.7,
         level: "Advanced",
@@ -933,7 +933,7 @@ const domainCourses = {
         title: "PLC & SCADA",
         description:
           "Learn programmable logic controllers, SCADA systems, and industrial automation technologies.",
-        duration: "4 months",
+        duration: "3 months",
         students: "1,300+",
         rating: 4.6,
         level: "Intermediate",
@@ -963,7 +963,7 @@ const domainCourses = {
         title: "Electric Vehicles (EV Technology)",
         description:
           "Explore EV design, battery systems, charging infrastructure, and future mobility solutions.",
-        duration: "5 months",
+        duration: "3 months",
         students: "1,000+",
         rating: 4.8,
         level: "Advanced",
@@ -993,7 +993,7 @@ const domainCourses = {
         title: "Industrial Automation",
         description:
           "Master industrial automation systems, robotics integration, and smart manufacturing technologies.",
-        duration: "5 months",
+        duration: "3 months",
         students: "800+",
         rating: 4.5,
         level: "Advanced",
@@ -1036,7 +1036,7 @@ const domainCourses = {
         title: "Thermodynamics & Heat Transfer",
         description:
           "Master thermal engineering principles, heat transfer mechanisms, and energy system analysis.",
-        duration: "5 months",
+        duration: "3 months",
         students: "1,400+",
         rating: 4.5,
         level: "Intermediate",
@@ -1066,7 +1066,7 @@ const domainCourses = {
         title: "Fluid Mechanics",
         description:
           "Learn fluid statics, dynamics, flow analysis, and hydraulic system design principles.",
-        duration: "4 months",
+        duration: "3 months",
         students: "1,200+",
         rating: 4.4,
         level: "Intermediate",
@@ -1096,7 +1096,7 @@ const domainCourses = {
         title: "Manufacturing Processes",
         description:
           "Master traditional and modern manufacturing techniques, quality control, and production systems.",
-        duration: "5 months",
+        duration: "3 months",
         students: "1,600+",
         rating: 4.6,
         level: "Intermediate",
@@ -1157,7 +1157,7 @@ const domainCourses = {
         title: "AutoCAD, SolidWorks, CATIA, ANSYS",
         description:
           "Master industry-standard CAD/CAE software for design, simulation, and analysis.",
-        duration: "6 months",
+        duration: "3 months",
         students: "2,200+",
         rating: 4.8,
         level: "Advanced",
@@ -1180,7 +1180,7 @@ const domainCourses = {
         title: "Robotics & Mechatronics",
         description:
           "Design and program robotic systems, automation, and intelligent mechanical systems.",
-        duration: "6 months",
+        duration: "3 months",
         students: "1,300+",
         rating: 4.7,
         level: "Advanced",
@@ -1210,7 +1210,7 @@ const domainCourses = {
         title: "HVAC Systems",
         description:
           "Learn heating, ventilation, air conditioning system design, and energy-efficient building systems.",
-        duration: "4 months",
+        duration: "3 months",
         students: "1,000+",
         rating: 4.5,
         level: "Advanced",
@@ -1240,7 +1240,7 @@ const domainCourses = {
         title: "3D Printing & Additive Manufacturing",
         description:
           "Master 3D printing technologies, additive manufacturing processes, and rapid prototyping.",
-        duration: "4 months",
+        duration: "3 months",
         students: "1,100+",
         rating: 4.6,
         level: "Advanced",
@@ -1270,7 +1270,7 @@ const domainCourses = {
         title: "CNC Programming",
         description:
           "Learn computer numerical control programming, machining operations, and automated manufacturing.",
-        duration: "4 months",
+        duration: "3 months",
         students: "900+",
         rating: 4.4,
         level: "Advanced",
@@ -1300,7 +1300,7 @@ const domainCourses = {
         title: "Industrial Engineering",
         description:
           "Optimize industrial processes, supply chain management, and operational efficiency.",
-        duration: "5 months",
+        duration: "3 months",
         students: "800+",
         rating: 4.5,
         level: "Advanced",
@@ -1343,7 +1343,7 @@ const domainCourses = {
         title: "Structural Engineering",
         description:
           "Master structural analysis, design principles, and building safety with modern engineering practices.",
-        duration: "6 months",
+        duration: "3 months",
         students: "1,200+",
         rating: 4.6,
         level: "Advanced",
@@ -1373,7 +1373,7 @@ const domainCourses = {
         title: "Transportation Engineering",
         description:
           "Learn highway design, traffic engineering, and transportation planning for modern infrastructure.",
-        duration: "5 months",
+        duration: "3 months",
         students: "800+",
         rating: 4.4,
         level: "Advanced",
@@ -1403,7 +1403,7 @@ const domainCourses = {
         title: "Geotechnical Engineering",
         description:
           "Master soil mechanics, foundation engineering, and ground improvement techniques.",
-        duration: "5 months",
+        duration: "3 months",
         students: "700+",
         rating: 4.3,
         level: "Advanced",
@@ -1433,7 +1433,7 @@ const domainCourses = {
         title: "Surveying & Estimation",
         description:
           "Learn land surveying techniques, quantity estimation, and project cost analysis.",
-        duration: "4 months",
+        duration: "3 months",
         students: "1,000+",
         rating: 4.2,
         level: "Intermediate",
@@ -1464,7 +1464,7 @@ const domainCourses = {
         title: "AutoCAD Civil 3D / STAAD.Pro / Revit",
         description:
           "Master industry-standard civil engineering software for design, analysis, and BIM modeling.",
-        duration: "6 months",
+        duration: "3 months",
         students: "1,500+",
         rating: 4.7,
         level: "Advanced",
@@ -1494,7 +1494,7 @@ const domainCourses = {
         title: "Construction Project Management",
         description:
           "Master project planning, cost estimation, site management, and construction administration.",
-        duration: "5 months",
+        duration: "3 months",
         students: "1,100+",
         rating: 4.5,
         level: "Advanced",
@@ -1524,7 +1524,7 @@ const domainCourses = {
         title: "Environmental Engineering",
         description:
           "Learn water treatment, waste management, and environmental impact assessment techniques.",
-        duration: "5 months",
+        duration: "3 months",
         students: "600+",
         rating: 4.4,
         level: "Advanced",
@@ -1554,7 +1554,7 @@ const domainCourses = {
         title: "Smart Cities & Infrastructure",
         description:
           "Design intelligent urban infrastructure, IoT integration, and sustainable city planning.",
-        duration: "6 months",
+        duration: "3 months",
         students: "700+",
         rating: 4.6,
         level: "Advanced",
@@ -1584,7 +1584,7 @@ const domainCourses = {
         title: "GIS & Remote Sensing",
         description:
           "Master geographic information systems, satellite imagery analysis, and spatial data management.",
-        duration: "4 months",
+        duration: "3 months",
         students: "500+",
         rating: 4.5,
         level: "Advanced",
@@ -1626,7 +1626,7 @@ const domainCourses = {
         title: "Project Management",
         description:
           "Master project planning, execution, and delivery with industry-standard methodologies and tools.",
-        duration: "5 months",
+        duration: "3 months",
         students: "2,500+",
         rating: 4.7,
         level: "Intermediate",
@@ -1656,7 +1656,7 @@ const domainCourses = {
         title: "Business Analytics",
         description:
           "Learn data analysis with Excel, Power BI, SQL, and Tableau for business insights and dashboard reporting.",
-        duration: "4 months",
+        duration: "3 months",
         students: "2,200+",
         rating: 4.6,
         level: "Intermediate",
@@ -1686,7 +1686,7 @@ const domainCourses = {
         title: "Digital Marketing (SEO, SEM, Google Ads)",
         description:
           "Master digital marketing strategies, SEO, SEM, and Google Ads with real campaign experience.",
-        duration: "4 months",
+        duration: "3 months",
         students: "3,000+",
         rating: 4.8,
         level: "Beginner",
@@ -1716,7 +1716,7 @@ const domainCourses = {
         title: "Product Management",
         description:
           "Learn product strategy, roadmap planning, and product lifecycle management for successful launches.",
-        duration: "5 months",
+        duration: "3 months",
         students: "1,500+",
         rating: 4.5,
         level: "Advanced",
@@ -1746,7 +1746,7 @@ const domainCourses = {
         title: "Human Resource Management (HRM)",
         description:
           "Master HR practices, talent management, and organizational development for modern workplaces.",
-        duration: "4 months",
+        duration: "3 months",
         students: "1,800+",
         rating: 4.4,
         level: "Intermediate",
@@ -1776,7 +1776,7 @@ const domainCourses = {
         title: "Operations & Supply Chain Management",
         description:
           "Optimize business operations, supply chain processes, and logistics for operational excellence.",
-        duration: "5 months",
+        duration: "3 months",
         students: "1,200+",
         rating: 4.5,
         level: "Advanced",
@@ -1806,7 +1806,7 @@ const domainCourses = {
         title: "Finance & Accounting",
         description:
           "Learn financial analysis, accounting principles, and financial management for business decision-making.",
-        duration: "5 months",
+        duration: "3 months",
         students: "1,600+",
         rating: 4.6,
         level: "Intermediate",

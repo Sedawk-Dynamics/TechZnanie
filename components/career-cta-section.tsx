@@ -113,6 +113,7 @@ export default function CareerCTASection() {
                 </motion.div>
               </Link>
               
+             <Link href="/about">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -125,6 +126,7 @@ export default function CareerCTASection() {
                   Learn About Culture
                 </Button>
               </motion.div>
+              </Link>
             </div>
 
             {/* Quick Stats */}

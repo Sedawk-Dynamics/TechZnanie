@@ -130,11 +130,17 @@ export default function Hero() {
               transition={{ delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button size="lg" className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 text-tz-dark-navy font-bold text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                Start Learning Today
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              
+              <a href="#domainss">
+            <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 text-tz-dark-navy font-bold text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
+              Start Learning Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+              </a>
+
+              <a href="https://www.youtube.com/">
               <Button 
                 size="lg" 
                 variant="outline" 
@@ -143,6 +149,7 @@ export default function Hero() {
                 <Play className="mr-2 w-5 h-5" />
                 Watch Demo
               </Button>
+              </a>
             </motion.div>
 
             {/* Stats */}
