@@ -191,7 +191,7 @@ const benefits = [
 
 const companyStats = [
   { number: "50+", label: "Team Members", icon: Users },
-  { number: "5+", label: "Office Locations", icon: Building },
+  { number: "1", label: "Office Location", icon: Building },
   { number: "4.8★", label: "Employee Rating", icon: Star },
   { number: "95%", label: "Retention Rate", icon: Award },
 ];
@@ -317,6 +317,7 @@ export default function CareersPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.8 }}
             >
+              <a href="#apply">
               <Button
                 size="lg"
                 className="bg-tz-bright-orange hover:bg-tz-bright-orange/90 text-white px-8 py-4 text-lg font-bold rounded-full shadow-2xl hover:shadow-tz-bright-orange/25 transition-all duration-300 transform hover:scale-105"
@@ -324,6 +325,7 @@ export default function CareersPage() {
                 View Open Positions
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
+              </a>
             </motion.div>
           </motion.div>
         </div>
@@ -384,7 +386,7 @@ export default function CareersPage() {
       </section>
 
       {/* Job Application Form */}
-      <section className="py-20 px-4 bg-white">
+      <section id="apply" className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

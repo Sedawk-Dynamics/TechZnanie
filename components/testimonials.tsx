@@ -15,7 +15,7 @@ export default function Testimonials() {
       name: "Priya Sharma",
       role: "Full Stack Developer",
       company: "Microsoft",
-      image: "https://static.pincel.app/cdn-cgi/image/width=750,format=auto/https://static.pincel.app/media/248dirybp3rfi0d2bdatvs-ras25b.png",
+      //image: "https://static.pincel.app/cdn-cgi/image/width=750,format=auto/https://static.pincel.app/media/248dirybp3rfi0d2bdatvs-ras25b.png",
       content: "TechZnanie completely transformed my career. The hands-on projects and mentorship helped me land my dream job at Microsoft. The curriculum is perfectly aligned with industry needs.",
       rating: 5,
       salary: "₹18 LPA",
@@ -26,7 +26,7 @@ export default function Testimonials() {
       name: "Rahul Kumar",
       role: "Data Scientist",
       company: "Amazon",
-      image: "https://pixahive.com/wp-content/uploads/2021/02/An-Indian-boy-375075-pixahive.jpg",
+      //image: "https://pixahive.com/wp-content/uploads/2021/02/An-Indian-boy-375075-pixahive.jpg",
       content: "The Data Science program exceeded my expectations. Real-world projects, industry datasets, and expert mentors made all the difference. Now I'm working on ML models at Amazon!",
       rating: 5,
       salary: "₹22 LPA",
@@ -37,7 +37,7 @@ export default function Testimonials() {
       name: "Sneha Patel",
       role: "UI/UX Designer",
       company: "Flipkart",
-      image: "https://images.unsplash.com/photo-1729101143873-d80050bae219?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bm9ydGglMjBpbmRpYW4lMjBnaXJsfGVufDB8fDB8fHww",
+      //image: "https://images.unsplash.com/photo-1729101143873-d80050bae219?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bm9ydGglMjBpbmRpYW4lMjBnaXJsfGVufDB8fDB8fHww",
       content: "From a non-tech background to designing user experiences at Flipkart - TechZnanie made this incredible journey possible. The portfolio projects were game-changers!",
       rating: 5,
       salary: "₹15 LPA",
@@ -48,7 +48,7 @@ export default function Testimonials() {
       name: "Arjun Singh",
       role: "Mobile App Developer",
       company: "Swiggy",
-      image: "https://i.pinimg.com/236x/fd/2c/35/fd2c35fe5388d58f66ba8d923c6b0fb5.jpg",
+      //image: "https://i.pinimg.com/236x/fd/2c/35/fd2c35fe5388d58f66ba8d923c6b0fb5.jpg",
       content: "The mobile development course was incredibly comprehensive. Building real apps and deploying them gave me the confidence to excel in interviews. Highly recommend TechZnanie!",
       rating: 5,
       salary: "₹16 LPA",
@@ -59,7 +59,7 @@ export default function Testimonials() {
       name: "Kavya Reddy",
       role: "Digital Marketing Manager",
       company: "Zomato",
-      image: "https://img.freepik.com/free-photo/indian-woman-posing-cute-stylish-outfit-camera-smiling_482257-122351.jpg?semt=ais_hybrid&w=740&q=80",
+      //image: "https://img.freepik.com/free-photo/indian-woman-posing-cute-stylish-outfit-camera-smiling_482257-122351.jpg?semt=ais_hybrid&w=740&q=80",
       content: "The digital marketing program is outstanding! Live campaigns, Google certifications, and agency partnerships helped me transition from sales to marketing at Zomato.",
       rating: 5,
       salary: "₹12 LPA",
@@ -70,7 +70,7 @@ export default function Testimonials() {
       name: "Vikram Joshi",
       role: "DevOps Engineer",
       company: "Paytm",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmJk1BUwlPszZsn_tpBf6LuhlAxH4ZtdG5pQ&s",
+      // image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmJk1BUwlPszZsn_tpBf6LuhlAxH4ZtdG5pQ&s",
       content: "Cloud computing and DevOps training was exactly what I needed. The hands-on AWS projects and certification prep landed me a senior role at Paytm. Excellent program!",
       rating: 5,
       salary: "₹20 LPA",
@@ -141,11 +141,7 @@ export default function Testimonials() {
                     
                     {/* Student Info */}
                     <div className="flex items-center space-x-4 mb-4">
-                      <img
-                        src={testimonial.image || "/placeholder.svg"}
-                        alt={testimonial.name}
-                        className="w-16 h-16 rounded-full object-cover border-2 border-tz-cream"
-                      />
+                      
                       <div className="flex-1">
                         <h4 className="font-bold text-tz-dark-navy text-lg">{testimonial.name}</h4>
                         <p className="text-tz-bright-orange font-semibold">{testimonial.role}</p>

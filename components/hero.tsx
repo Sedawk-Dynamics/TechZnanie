@@ -140,7 +140,7 @@ export default function Hero() {
             </Button>
               </a>
 
-              <a href="https://www.youtube.com/">
+              <a href="https://www.youtube.com/@TechZnanieInnoversity">
               <Button 
                 size="lg" 
                 variant="outline" 

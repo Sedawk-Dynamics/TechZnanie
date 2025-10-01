@@ -34,11 +34,11 @@ export default function Footer() {
   ]
 
   const socialLinks = [
-    { icon: Facebook, href: "https://www.facebook.com/techznanie", label: "Facebook", color: "hover:bg-blue-600" },
+    { icon: Facebook, href: "https://www.facebook.com/share/1Cmb8696aK/?mibextid=wwXIfr", label: "Facebook", color: "hover:bg-blue-600" },
     { icon: Twitter, href: "https://x.com/TechZnanie", label: "Twitter", color: "hover:bg-blue-400" },
     { icon: Linkedin, href: "https://www.linkedin.com/company/techznanie/", label: "LinkedIn", color: "hover:bg-blue-700" },
-    { icon: Instagram, href: "https://www.instagram.com/techznanie/", label: "Instagram", color: "hover:bg-pink-600" },
-    { icon: Youtube, href: "#", label: "YouTube", color: "hover:bg-red-600" },
+    { icon: Instagram, href: "https://www.instagram.com/techznanieinnoversity?igsh=eXgzdDM4M29mcDN6", label: "Instagram", color: "hover:bg-pink-600" },
+    { icon: Youtube, href: "https://www.youtube.com/@TechZnanieInnoversity", label: "YouTube", color: "hover:bg-red-600" },
   ]
 
   return (
@@ -116,12 +116,12 @@ export default function Footer() {
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-tz-bright-orange flex-shrink-0" />
                   <span className="text-white/80 text-sm">
-                    Plot no 117, Gowtaminagar, Vanastalipuram, Hyderabad, 500070
+                    FIRST FLOOR, DSL ABACUS IT PARK, Survey Colony, IDA Uppal, Uppal, Hyderabad, Telangana 500039
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-tz-bright-orange" />
-                  <span className="text-white/80">+91-8919440316</span>
+                  <span className="text-white/80">+91-7207276622</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-tz-bright-orange" />

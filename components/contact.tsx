@@ -14,16 +14,16 @@ export default function Contact() {
     {
       icon: MapPin,
       title: "Visit Our Campus",
-      details: "FIRST FLOOR,UG7, DSL ABACUS IT PARK, Survey Colony, IDA Uppal, Uppal, Hyderabad, Telangana 500039",
+      details: "FIRST FLOOR, DSL ABACUS IT PARK, Survey Colony, IDA Uppal, Uppal, Hyderabad, Telangana 500039",
       action: "Get Directions",
       link: "https://share.google/nJXPT5N1ubkKSkFTP"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: "+91-8919440316",
+      details: "+91-7207276622",
       action: "Call Now",
-      link: "tel:+91-8919440316"
+      link: "tel:+91-7207276622"
     },
     {
       icon: Mail,
@@ -37,7 +37,7 @@ export default function Contact() {
       title: "Office Hours",
       details: "Mon - Fri: 10:30 AM - 8:00 PM\nSat: 10:30 AM - 8:00 PM",
       action: "Schedule Visit",
-      link: "#"
+      link: "https://calendly.com/techznanie/30min"
     }
   ]
 
@@ -254,13 +254,13 @@ export default function Contact() {
                     Interested Program
                   </Label>
                   <select className="form-input">
-                    <option value="">Select a Domain</option>
+                    <option value="">Select a Stream</option>
                     <option value="fullstack">Computer Science & Engineer</option>
-                    <option value="datascience">Full Stack Development</option>
-                    <option value="mobile">Artificial Intelligence</option>
-                    <option value="digital-marketing">Mobile App Development</option>
-                    <option value="uiux">Data Structures & Algorithms</option>
-                    <option value="cloud">Database Management & SQL</option>
+                    <option value="datascience">Electronics & Comunications</option>
+                    <option value="mobile">Electrical & Electronics</option>
+                    <option value="digital-marketing">Mechanical Engineering</option>
+                    <option value="uiux">Civil Engineering</option>
+                    <option value="cloud">Management</option>
                   </select>
                 </div>
                 
