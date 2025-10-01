@@ -14,26 +14,30 @@ export default function Contact() {
     {
       icon: MapPin,
       title: "Visit Our Campus",
-      details: "Plot no 117, Gowtaminagar, Vanastalipuram, Hyderabad, 500070",
-      action: "Get Directions"
+      details: "FIRST FLOOR,UG7, DSL ABACUS IT PARK, Survey Colony, IDA Uppal, Uppal, Hyderabad, Telangana 500039",
+      action: "Get Directions",
+      link: "https://share.google/nJXPT5N1ubkKSkFTP"
     },
     {
       icon: Phone,
       title: "Call Us",
       details: "+91-8919440316",
-      action: "Call Now"
+      action: "Call Now",
+      link: "tel:+91-8919440316"
     },
     {
       icon: Mail,
       title: "Email Us",
       details: "info@techznanieinnoversity.com",
-      action: "Send Email"
+      action: "Send Email",
+      link: "mailto:info@techznanieinnoversity.com"
     },
     {
       icon: Clock,
       title: "Office Hours",
-      details: "Mon - Fri: 9:00 AM - 6:00 PM\nSat: 10:00 AM - 4:00 PM",
-      action: "Schedule Visit"
+      details: "Mon - Fri: 10:30 AM - 8:00 PM\nSat: 10:30 AM - 8:00 PM",
+      action: "Schedule Visit",
+      link: "#"
     }
   ]
 
@@ -139,12 +143,16 @@ export default function Contact() {
                           <h4 className="text-lg font-bold text-tz-dark-navy mb-2">{info.title}</h4>
                           <p className="text-gray-600 mb-3 whitespace-pre-line">{info.details}</p>
                           <Button 
+                          asChild
                             variant="outline" 
-                            size="sm"
-                            className="border-tz-bright-orange text-tz-bright-orange hover:bg-tz-bright-orange hover:text-white"
-                          >
-                            {info.action}
+                              size="sm"
+                                className="border-tz-bright-orange text-tz-bright-orange hover:bg-tz-bright-orange hover:text-white"
+                            >
+                              <a href={info.link} target="_blank" rel="noopener noreferrer">
+                                  {info.action}
+                              </a>
                           </Button>
+
                         </div>
                       </div>
                     </Card>
@@ -246,13 +254,13 @@ export default function Contact() {
                     Interested Program
                   </Label>
                   <select className="form-input">
-                    <option value="">Select a program</option>
-                    <option value="fullstack">Full Stack Development</option>
-                    <option value="datascience">Data Science & Analytics</option>
-                    <option value="mobile">Mobile App Development</option>
-                    <option value="digital-marketing">Digital Marketing</option>
-                    <option value="uiux">UI/UX Design</option>
-                    <option value="cloud">Cloud Computing & DevOps</option>
+                    <option value="">Select a Domain</option>
+                    <option value="fullstack">Computer Science & Engineer</option>
+                    <option value="datascience">Full Stack Development</option>
+                    <option value="mobile">Artificial Intelligence</option>
+                    <option value="digital-marketing">Mobile App Development</option>
+                    <option value="uiux">Data Structures & Algorithms</option>
+                    <option value="cloud">Database Management & SQL</option>
                   </select>
                 </div>
                 
