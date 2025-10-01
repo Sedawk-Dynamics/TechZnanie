@@ -8,8 +8,46 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Badge } from "@/components/ui/badge"
+import { useState } from "react"
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    program: "",
+    message: "",
+  })
+  const [status, setStatus] = useState("")
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value })
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setStatus("Sending...")
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await res.json()
+      if (result.success) {
+        setStatus("✅ Message sent successfully!")
+        setFormData({ firstName: "", lastName: "", email: "", phone: "", program: "", message: "" })
+      } else {
+        setStatus("❌ Failed to send. Try again later.")
+      }
+    } catch (err) {
+      setStatus("❌ Something went wrong.")
+    }
+  }
+
   const contactInfo = [
     {
       icon: MapPin,
@@ -65,6 +103,7 @@ export default function Contact() {
   return (
     <section id="contact" className="section-padding bg-white">
       <div className="container-modern">
+
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -94,7 +133,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="grid md:grid-cols-3 gap-6 mb-16"
         >
-          {quickActions.map((action, index) => (
+          {quickActions.map((action) => (
             <motion.div
               key={action.title}
               whileHover={{ scale: 1.05, y: -5 }}
@@ -114,7 +153,7 @@ export default function Contact() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16">
-          {/* Contact Information */}
+          {/* Contact Info (left side) */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -142,17 +181,11 @@ export default function Contact() {
                         <div className="flex-1">
                           <h4 className="text-lg font-bold text-tz-dark-navy mb-2">{info.title}</h4>
                           <p className="text-gray-600 mb-3 whitespace-pre-line">{info.details}</p>
-                          <Button 
-                          asChild
-                            variant="outline" 
-                              size="sm"
-                                className="border-tz-bright-orange text-tz-bright-orange hover:bg-tz-bright-orange hover:text-white"
-                            >
-                              <a href={info.link} target="_blank" rel="noopener noreferrer">
-                                  {info.action}
-                              </a>
+                          <Button asChild variant="outline" size="sm" className="border-tz-bright-orange text-tz-bright-orange hover:bg-tz-bright-orange hover:text-white">
+                            <a href={info.link} target="_blank" rel="noopener noreferrer">
+                              {info.action}
+                            </a>
                           </Button>
-
                         </div>
                       </div>
                     </Card>
@@ -160,36 +193,9 @@ export default function Contact() {
                 ))}
               </div>
             </div>
-
-            {/* Campus Image */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="relative rounded-2xl overflow-hidden shadow-modern"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
-                alt="TechZnanie Campus"
-                className="w-full h-64 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-tz-dark-navy/60 to-transparent" />
-              <div className="absolute bottom-6 left-6 text-white">
-                <div className="flex items-center space-x-2 mb-2">
-                  <MapPin className="w-5 h-5" />
-                  <span className="font-bold">Our Innovation Campus</span>
-                </div>
-                <p className="text-sm opacity-90">State-of-the-art facilities in Hyderabad</p>
-                <p className="text-xs opacity-75">Modern classrooms • Tech labs • Student lounge</p>
-              </div>
-            </motion.div>
           </motion.div>
 
-
-          
-
-          {/* Contact Form */}
+          {/* Contact Form (right side) */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -202,88 +208,57 @@ export default function Contact() {
                 <p className="text-white/90">We'll respond within 2 hours during business hours</p>
               </CardHeader>
               <CardContent className="p-8 space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName" className="text-tz-dark-navy font-semibold">
-                      First Name *
-                    </Label>
-                    <Input 
-                      id="firstName" 
-                      placeholder="Enter your first name" 
-                      className="form-input" 
-                    />
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="firstName" className="text-tz-dark-navy font-semibold">First Name *</Label>
+                      <Input id="firstName" value={formData.firstName} onChange={handleChange} placeholder="Enter your first name" className="form-input" required />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="lastName" className="text-tz-dark-navy font-semibold">Last Name *</Label>
+                      <Input id="lastName" value={formData.lastName} onChange={handleChange} placeholder="Enter your last name" className="form-input" required />
+                    </div>
                   </div>
+
                   <div className="space-y-2">
-                    <Label htmlFor="lastName" className="text-tz-dark-navy font-semibold">
-                      Last Name *
-                    </Label>
-                    <Input 
-                      id="lastName" 
-                      placeholder="Enter your last name" 
-                      className="form-input" 
-                    />
+                    <Label htmlFor="email" className="text-tz-dark-navy font-semibold">Email Address *</Label>
+                    <Input id="email" type="email" value={formData.email} onChange={handleChange} placeholder="your.email@example.com" className="form-input" required />
                   </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-tz-dark-navy font-semibold">
-                    Email Address *
-                  </Label>
-                  <Input 
-                    id="email" 
-                    type="email" 
-                    placeholder="your.email@example.com" 
-                    className="form-input" 
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="phone" className="text-tz-dark-navy font-semibold">
-                    Phone Number *
-                  </Label>
-                  <Input 
-                    id="phone" 
-                    type="tel" 
-                    placeholder="+91 XXXXX XXXXX" 
-                    className="form-input" 
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="program" className="text-tz-dark-navy font-semibold">
-                    Interested Program
-                  </Label>
-                  <select className="form-input">
-                    <option value="">Select a Stream</option>
-                    <option value="fullstack">Computer Science & Engineer</option>
-                    <option value="datascience">Electronics & Comunications</option>
-                    <option value="mobile">Electrical & Electronics</option>
-                    <option value="digital-marketing">Mechanical Engineering</option>
-                    <option value="uiux">Civil Engineering</option>
-                    <option value="cloud">Management</option>
-                  </select>
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="message" className="text-tz-dark-navy font-semibold">
-                    Message
-                  </Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Tell us about your career goals and any questions you have..."
-                    rows={5}
-                    className="form-textarea"
-                  />
-                </div>
-                
-                <Button className="w-full btn-primary text-lg py-4">
-                  <Send className="w-5 h-5 mr-2" />
-                  Send Message
-                </Button>
-                
-                <p className="text-sm text-gray-500 text-center">
-                  By submitting this form, you agree to our Terms of Service and Privacy Policy.
-                </p>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="phone" className="text-tz-dark-navy font-semibold">Phone Number *</Label>
+                    <Input id="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="+91 XXXXX XXXXX" className="form-input" required />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="program" className="text-tz-dark-navy font-semibold">Interested Program</Label>
+                    <select id="program" value={formData.program} onChange={handleChange} className="form-input">
+                      <option value="">Select a Stream</option>
+                      <option value="CSE">Computer Science & Engineering</option>
+                      <option value="ECE">Electronics & Communications</option>
+                      <option value="EEE">Electrical & Electronics</option>
+                      <option value="ME">Mechanical Engineering</option>
+                      <option value="CE">Civil Engineering</option>
+                      <option value="Management">Management</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="message" className="text-tz-dark-navy font-semibold">Message</Label>
+                    <Textarea id="message" value={formData.message} onChange={handleChange} placeholder="Tell us about your career goals and any questions you have..." rows={5} className="form-textarea" />
+                  </div>
+
+                  <Button type="submit" className="w-full btn-primary text-lg py-4">
+                    <Send className="w-5 h-5 mr-2" />
+                    Send Message
+                  </Button>
+
+                  {status && (
+                    <p className="text-center text-sm mt-2">
+                      {status}
+                    </p>
+                  )}
+                </form>
               </CardContent>
             </Card>
           </motion.div>
