@@ -197,6 +197,32 @@ const companyStats = [
 ];
 
 export default function CareersPage() {
+  // ✅ form submit handler
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("/api/careers", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await res.json();
+      if (result.success) {
+        alert("✅ Application submitted successfully!");
+        form.reset();
+      } else {
+        alert("❌ Failed to submit application. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("⚠️ Something went wrong while submitting.");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -413,7 +439,7 @@ export default function CareersPage() {
               <CardContent className="p-8">
                 <form
                   className="space-y-6"
-                  onSubmit={(e) => e.preventDefault()}
+                  onSubmit={handleSubmit}
                 >
                   {/* Personal Information */}
                   <div className="space-y-4">
@@ -759,7 +785,7 @@ export default function CareersPage() {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      <Button className="w-full bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange hover:from-tz-dark-orange hover:to-tz-bright-orange text-white font-bold py-5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-lg">
+                      <Button type="submit" className="w-full bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange hover:from-tz-dark-orange hover:to-tz-bright-orange text-white font-bold py-5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-lg">
                         Submit Application
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
