@@ -26,6 +26,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { useState } from "react";
 
 const jobOpenings = [
   {
@@ -197,12 +198,15 @@ const companyStats = [
 ];
 
 export default function CareersPage() {
-  // ✅ form submit handler
+  const [status, setStatus] = useState<"idle" | "success" | "error" | "loading">("idle");
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+
+    setStatus("loading");
 
     try {
       const res = await fetch("/api/careers", {
@@ -212,14 +216,14 @@ export default function CareersPage() {
 
       const result = await res.json();
       if (result.success) {
-        alert("✅ Application submitted successfully!");
+        setStatus("success");
         form.reset();
       } else {
-        alert("❌ Failed to submit application. Please try again.");
+        setStatus("error");
       }
     } catch (error) {
       console.error(error);
-      alert("⚠️ Something went wrong while submitting.");
+      setStatus("error");
     }
   };
 
@@ -785,12 +789,29 @@ export default function CareersPage() {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      <Button type="submit" className="w-full bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange hover:from-tz-dark-orange hover:to-tz-bright-orange text-white font-bold py-5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-lg">
-                        Submit Application
+                       {status === "loading" && (
+                      <p className="text-blue-600 font-medium mb-2">⏳ Sending your application...</p>
+                    )}
+                      <Button type="submit" 
+                      disabled={status === "loading"}
+                      className="w-full bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange hover:from-tz-dark-orange hover:to-tz-bright-orange text-white font-bold py-5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-lg">
+                      
+                         {status === "loading" ? "Sending..." : "Submit Application"}
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
                     </motion.div>
                   </div>
+                  {/* ✅ Inline messages */}
+                {status === "success" && (
+                  <p className="mt-4 text-green-600 font-semibold text-center">
+                    ✅ Your application has been submitted successfully!
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="mt-4 text-red-600 font-semibold text-center">
+                    ❌ Something went wrong. Please try again later.
+                  </p>
+                )}
                 </form>
               </CardContent>
             </Card>
