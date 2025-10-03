@@ -795,7 +795,6 @@ export default function CareersPage() {
                       <Button type="submit" 
                       disabled={status === "loading"}
                       className="w-full bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange hover:from-tz-dark-orange hover:to-tz-bright-orange text-white font-bold py-5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-lg">
-                      
                          {status === "loading" ? "Sending..." : "Submit Application"}
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
