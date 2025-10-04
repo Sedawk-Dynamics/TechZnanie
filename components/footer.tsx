@@ -12,7 +12,7 @@ export default function Footer() {
     { name: "About Us", href: "/about" },
     { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
-    { name: "Blogs", href: "/blogs" },
+    { name: "Blog", href: "/blogs" },
   ]
 
   const programs = [
@@ -25,12 +25,12 @@ export default function Footer() {
   ]
 
   const resources = [
-    "Free Webinars",
-    "Career Guide",
-    "Salary Reports",
-    "Interview Prep",
-    "Coding Challenges",
-    "Tech News",
+    { name: "Free Webinars", href: "/webinars" },
+    { name: "Career Guide", href: "/career-guide" },
+    { name: "Salary Reports", href: "/salary-report" },
+    { name: "Interview Prep", href: "/interview-prep" },
+    { name: "Coding Challenges", href: "/coding-challenges" },
+    { name: "Tech News", href: "#" },
   ]
 
   const socialLinks = [
@@ -71,7 +71,20 @@ export default function Footer() {
                 <span className="text-white/80 ml-2">Trusted by 500+ professionals</span>
               </div>
             </div>
-            
+            <div className="space-y-4">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-tz-bright-orange"
+                />
+                <Button className="btn-primary px-8">
+                  Subscribe
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </div>
+              <p className="text-sm text-white/60">No spam, unsubscribe at any time. We respect your privacy.</p>
+            </div>
           </div>
         </motion.div>
 
@@ -103,12 +116,12 @@ export default function Footer() {
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-tz-bright-orange flex-shrink-0" />
                   <span className="text-white/80 text-sm">
-                    FIRST FLOOR, DSL ABACUS IT PARK, Survey Colony, IDA Uppal, Uppal, Hyderabad, Telangana 500039
+                    Plot no 117, Gowtaminagar, Vanastalipuram, Hyderabad, 500070
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-tz-bright-orange" />
-                  <span className="text-white/80">+91-7207276622</span>
+                  <span className="text-white/80">+91-8919440316</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-tz-bright-orange" />
@@ -187,14 +200,14 @@ export default function Footer() {
               <h4 className="text-lg font-bold mb-6 text-tz-cream">Resources</h4>
               <ul className="space-y-3">
                 {resources.map((resource) => (
-                  <li key={resource}>
-                    <a
-                      href="#"
+                  <li key={resource.name}>
+                    <Link
+                      href={resource.href}
                       className="text-white/80 hover:text-tz-bright-orange transition-colors text-sm flex items-center group"
                     >
                       <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {resource}
-                    </a>
+                      {resource.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
