@@ -71,20 +71,8 @@ export default function Footer() {
                 <span className="text-white/80 ml-2">Trusted by 500+ professionals</span>
               </div>
             </div>
-            <div className="space-y-4">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-tz-bright-orange"
-                />
-                <Button className="btn-primary px-8">
-                  Subscribe
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </div>
-              <p className="text-sm text-white/60">No spam, unsubscribe at any time. We respect your privacy.</p>
-            </div>
+            
+            
           </div>
         </motion.div>
 
