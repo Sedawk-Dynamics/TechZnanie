@@ -551,7 +551,8 @@ export default function SalaryReportsPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <Card className="bg-gradient-to-br from-tz-bright-orange/20 to-tz-medium-blue/20 backdrop-blur-sm border-tz-bright-orange/30 overflow-hidden">
+            <Card className="bg-[#0A0EEC] bg-gradient-to-br from-[#0D0B52] via-[#0E107A] to-[#0A0EEC] border border-[#1E1FFF]/30 text-white overflow-hidden rounded-2xl shadow-lg">
+
               <CardContent className="p-8 md:p-12">
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="w-12 h-12 bg-tz-bright-orange rounded-xl flex items-center justify-center flex-shrink-0">

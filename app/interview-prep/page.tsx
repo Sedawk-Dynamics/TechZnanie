@@ -347,10 +347,12 @@ export default function InterviewPrepPage() {
               ))}
             </div>
 
+            <a href="#Question">
             <Button className="bg-tz-bright-orange hover:bg-[#e67200] text-white font-semibold px-8 py-6 text-lg rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
               Start Practicing
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
+            </a>
           </motion.div>
         </div>
       </section>
@@ -367,11 +369,11 @@ export default function InterviewPrepPage() {
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <Star className="w-6 h-6 text-tz-bright-orange" />
-              <h2 className="text-3xl font-bold text-white">Question of the Week</h2>
+              <h2 id="Question" className="text-3xl font-bold text-white">Question of the Week</h2>
               <Star className="w-6 h-6 text-tz-bright-orange" />
             </div>
 
-            <Card className="bg-gradient-to-br from-tz-bright-orange/10 to-tz-medium-blue/10 border-tz-bright-orange/30 overflow-hidden">
+            <Card className="bg-[#0A0EEC] bg-gradient-to-br from-[#0D0B52] via-[#0E107A] to-[#0A0EEC] border border-[#1E1FFF]/30 text-white overflow-hidden rounded-2xl shadow-lg">
               <CardContent className="p-8">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3">
@@ -606,7 +608,7 @@ export default function InterviewPrepPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-white/10 to-white/5 border-white/20 hover:border-tz-bright-orange/50 transition-all duration-300 h-full">
+                <Card className="bg-[#0A0EEC] bg-gradient-to-br from-[#0D0B52] via-[#0E107A] to-[#0A0EEC] border border-[#1E1FFF]/30 text-white overflow-hidden rounded-2xl shadow-lg">
                   <CardContent className="p-6">
                     <div className="bg-gradient-to-br from-tz-bright-orange/20 to-tz-medium-blue/20 p-4 rounded-xl mb-4">
                       <FileText className="w-12 h-12 text-tz-bright-orange mx-auto" />

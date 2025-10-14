@@ -1,6 +1,8 @@
 "use client"
 
-import { motion } from "framer-motion"
+import type React from "react"
+
+import { motion, AnimatePresence } from "framer-motion"
 import {
   Calendar,
   Clock,
@@ -16,6 +18,11 @@ import {
   Download,
   Eye,
   Lock,
+  X,
+  Mail,
+  Phone,
+  User,
+  CheckCircle,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -25,11 +32,38 @@ import { useState } from "react"
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
+interface Webinar {
+  id: number
+  title: string
+  date: string
+  time: string
+  speaker: {
+    name: string
+    designation: string
+    image: string
+    linkedin: string
+  }
+  description: string
+  category: string
+  attendees: number
+  status: string
+}
+
 export default function WebinarsPage() {
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("all")
+  const [showRegistrationModal, setShowRegistrationModal] = useState(false)
+  const [selectedWebinar, setSelectedWebinar] = useState<Webinar | null>(null)
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    domain: "",
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const upcomingWebinars = [
+  const upcomingWebinars: Webinar[] = [
     {
       id: 1,
       title: "Roadmap to Full Stack Developer",
@@ -49,7 +83,7 @@ export default function WebinarsPage() {
     },
     {
       id: 2,
-      title: "Generative AI for Beginners",
+      title: "AI for Beginners",
       date: "12th Nov 2025",
       time: "6:30 PM IST",
       speaker: {
@@ -65,7 +99,7 @@ export default function WebinarsPage() {
     },
     {
       id: 3,
-      title: "Mastering React.js in 2025",
+      title: "Mastering UI/UX",
       date: "18th Nov 2025",
       time: "7:30 PM IST",
       speaker: {
@@ -81,7 +115,7 @@ export default function WebinarsPage() {
     },
     {
       id: 4,
-      title: "Career Success in Tech Industry",
+      title: "IOT",
       date: "25th Nov 2025",
       time: "6:00 PM IST",
       speaker: {
@@ -219,9 +253,65 @@ export default function WebinarsPage() {
     },
   ]
 
+  const handleRegisterClick = (webinar: Webinar) => {
+    setSelectedWebinar(webinar)
+    setShowRegistrationModal(true)
+    setIsSubmitted(false)
+    setFormData({ name: "", email: "", phone: "", domain: "" })
+  }
+
+  const handleCloseModal = () => {
+    setShowRegistrationModal(false)
+    setSelectedWebinar(null)
+    setIsSubmitted(false)
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  setIsSubmitting(true)
+
+  try {
+    const res = await fetch("/api/webinar-registration", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ...formData,
+        webinarTitle: selectedWebinar?.title,
+      }),
+    })
+
+    const data = await res.json()
+
+    if (res.ok) {
+      setIsSubmitted(true)
+      // Optionally show success toast here
+      setTimeout(() => {
+        handleCloseModal()
+      }, 3000)
+    } else {
+      console.error(data.error)
+      alert("Something went wrong while submitting the form.")
+    }
+  } catch (error) {
+    console.error("Submission error:", error)
+    alert("Unable to submit at the moment.")
+  } finally {
+    setIsSubmitting(false)
+  }
+}
+
+
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-        <Navbar />
+      <Navbar />
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         {/* Background Image with Overlay */}
@@ -261,10 +351,12 @@ export default function WebinarsPage() {
               interactive.
             </p>
 
+            <a href="#webinars">
             <Button className="btn-primary text-lg px-8 py-6 group">
               Register for Upcoming Webinar
               <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
+            </a>
           </motion.div>
         </div>
       </section>
@@ -307,7 +399,7 @@ export default function WebinarsPage() {
       </section>
 
       {/* Upcoming Webinars Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section id="webinars" className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container-modern">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -379,7 +471,7 @@ export default function WebinarsPage() {
                     </a>
                   </div>
 
-                  <Button className="w-full btn-primary group/btn">
+                  <Button onClick={() => handleRegisterClick(webinar)} className="w-full btn-primary group/btn">
                     Register Now
                     <ChevronRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
@@ -558,14 +650,12 @@ export default function WebinarsPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-primary text-lg px-8 py-6">
-                <Download className="mr-2 w-5 h-5" />
-                Download Sample Certificate
-              </Button>
+              <a href="/contact">
               <Button className="bg-white text-tz-dark-navy hover:bg-gray-100 text-lg px-8 py-6">
-                View All Benefits
+                Enroll Now
                 <ChevronRight className="ml-2 w-5 h-5" />
               </Button>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -587,10 +677,12 @@ export default function WebinarsPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="#webinars">
               <Button className="btn-primary text-lg px-8 py-6">
                 Register for Next Webinar
                 <ChevronRight className="ml-2 w-5 h-5" />
               </Button>
+              </a>
               <Button asChild variant="outline" className="text-lg px-8 py-6 border-2 bg-transparent">
                 <Link href="/contact">Contact Us</Link>
               </Button>
@@ -598,6 +690,185 @@ export default function WebinarsPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Registration Modal */}
+      <AnimatePresence>
+        {showRegistrationModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={handleCloseModal}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", duration: 0.5 }}
+              className="bg-white rounded-2xl max-w-md w-full shadow-2xl overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {!isSubmitted ? (
+                <>
+                  {/* Modal Header */}
+                  <div className="bg-gradient-to-br from-tz-bright-orange to-tz-dark-orange p-6 text-white relative">
+                    <button
+                      onClick={handleCloseModal}
+                      className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+                    >
+                      <X className="w-5 h-5" />
+                    </button>
+                    <h3 className="text-2xl font-bold mb-2">Register for Webinar</h3>
+                    <p className="text-white/90 text-sm">{selectedWebinar?.title}</p>
+                  </div>
+
+                  {/* Modal Body */}
+                  <form onSubmit={handleSubmit} className="p-6 space-y-4">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                        Full Name *
+                      </label>
+                      <div className="relative">
+                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                          placeholder="Enter your full name"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        Email Address *
+                      </label>
+                      <div className="relative">
+                        <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                          placeholder="your.email@example.com"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                        Phone Number *
+                      </label>
+                      <div className="relative">
+                        <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                          placeholder="+91 98765 43210"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="domain" className="block text-sm font-medium text-gray-700 mb-2">
+                        Domain of Interest *
+                      </label>
+                      <select
+                        id="domain"
+                        name="domain"
+                        value={formData.domain}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-tz-bright-orange focus:border-transparent"
+                      >
+                        <option value="">Select your domain</option>
+                        <option value="web-development">Web Development</option>
+                        <option value="ai-ml">AI & Machine Learning</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="cloud-devops">Cloud & DevOps</option>
+                        <option value="cybersecurity">Cybersecurity</option>
+                        <option value="embedded-systems">Embedded Systems</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+
+                    <div className="flex items-start space-x-2 pt-2">
+                      <input
+                        type="checkbox"
+                        id="updates"
+                        className="mt-1 w-4 h-4 text-tz-bright-orange border-gray-300 rounded focus:ring-tz-bright-orange"
+                      />
+                      <label htmlFor="updates" className="text-sm text-gray-600">
+                        I agree to receive updates about upcoming webinars and courses from TechZnanie Innoversity
+                      </label>
+                    </div>
+
+                    <Button type="submit" disabled={isSubmitting} className="w-full btn-primary text-lg py-3 mt-6">
+                      {isSubmitting ? (
+                        <span className="flex items-center justify-center">
+                          <svg
+                            className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                          >
+                            <circle
+                              className="opacity-25"
+                              cx="12"
+                              cy="12"
+                              r="10"
+                              stroke="currentColor"
+                              strokeWidth="4"
+                            ></circle>
+                            <path
+                              className="opacity-75"
+                              fill="currentColor"
+                              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                            ></path>
+                          </svg>
+                          Registering...
+                        </span>
+                      ) : (
+                        "Complete Registration"
+                      )}
+                    </Button>
+                  </form>
+                </>
+              ) : (
+                <div className="p-8 text-center">
+                  <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-12 h-12 text-green-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2 text-gray-900">Registration Successful!</h3>
+                  <p className="text-gray-600 mb-4">
+                    You've successfully registered for <strong>{selectedWebinar?.title}</strong>
+                  </p>
+                  <p className="text-sm text-gray-500 mb-6">
+                    We will share confirmation email with the webinar details and joining link to{" "}
+                    <strong>{formData.email}</strong>
+                  </p>
+                  <Button onClick={handleCloseModal} className="btn-primary">
+                    Close
+                  </Button>
+                </div>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <Footer />
     </div>
   )
