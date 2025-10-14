@@ -104,7 +104,7 @@ export default function Footer() {
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-tz-bright-orange flex-shrink-0" />
                   <span className="text-white/80 text-sm">
-                    FIRST FLOOR,UG7, Survey Colony, IDA Uppal, Uppal, Hyderabad, Telangana 500039
+                    FIRST FLOOR, Survey Colony, IDA Uppal, Uppal, Hyderabad, Telangana 500039
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
