@@ -520,16 +520,18 @@ void loop() {
               ))}
             </div>
 
+            <a href="#n1">
             <Button className="bg-tz-bright-orange hover:bg-[#e67200] text-white font-semibold px-8 py-3 rounded-xl text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
               Start Coding Now
               <ChevronRight className="ml-2 w-5 h-5" />
             </Button>
+            </a>
           </motion.div>
         </div>
       </section>
 
       {/* Question of the Week */}
-      <section className="py-12">
+      <section id="n1" className="py-12">
         <div className="container-modern">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -569,10 +571,7 @@ void loop() {
                   <Star className="w-5 h-5 text-yellow-400" />
                   <span>156 solved this week</span>
                 </div>
-                <Button className="ml-auto bg-white text-tz-dark-navy hover:bg-white/90 font-semibold">
-                  Accept Challenge
-                  <ChevronRight className="ml-2 w-4 h-4" />
-                </Button>
+                
               </div>
             </div>
           </motion.div>
@@ -855,13 +854,17 @@ void loop() {
               placement support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="#n1">
               <Button className="bg-tz-bright-orange hover:bg-[#e67200] text-white font-semibold px-8 py-3 rounded-xl text-lg">
                 Explore Bootcamps
                 <ChevronRight className="ml-2 w-5 h-5" />
               </Button>
+              </a>
+              <a href="tel:7207276622">
               <Button className="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold px-8 py-3 rounded-xl text-lg">
                 Talk to Career Advisor
               </Button>
+              </a>
             </div>
           </motion.div>
         </div>

@@ -456,6 +456,7 @@ export default function CareerGuidePage() {
               industry experts.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a href="#explore">
               <Button
                 size="lg"
                 className="bg-tz-bright-orange hover:bg-tz-dark-orange text-white px-8 py-6 text-lg rounded-xl shadow-lg"
@@ -463,6 +464,8 @@ export default function CareerGuidePage() {
                 Explore Bootcamps
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
+              </a>
+              <a href="+91-7207276622">
               <Button
                 size="lg"
                 variant="outline"
@@ -470,6 +473,7 @@ export default function CareerGuidePage() {
               >
                 Talk to Career Advisor
               </Button>
+              </a>
             </div>
           </motion.div>
         </div>

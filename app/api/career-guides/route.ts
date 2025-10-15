@@ -1,5 +1,3 @@
-// /app/api/download-guide/route.ts
-
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -7,32 +5,33 @@ export async function POST(req: Request) {
   try {
     const { name, email, phone, guideTitle } = await req.json();
 
-    // Configure Gmail transporter
+    // ✅ Gmail SMTP setup (Google Workspace)
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.GMAIL_USER, // example: info@yourdomain.com
-        pass: process.env.GMAIL_PASS,
+        user: process.env.EMAIL_USER, // your info@ email
+        pass: process.env.EMAIL_PASS, // App Password (NOT your login password)
       },
     });
 
-    // Email content
-    await transporter.sendMail({
-      from: `"Career Guide Download" <${process.env.GMAIL_USER}>`,
-      to: "info@yourdomain.com", // 📩 your destination email
-      subject: `New Career Guide Download Request`,
+    const mailOptions = {
+      from: `"TechZnanie Career Guides" <${process.env.EMAIL_USER}>`,
+      to: "info@techznanieinnoversity.com",
+      subject: `New Career Guide Download Request - ${guideTitle}`,
       html: `
-        <h3>New Guide Download Request</h3>
+        <h2>New Career Guide Download</h2>
+        <p><strong>Guide:</strong> ${guideTitle}</p>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Guide:</strong> ${guideTitle}</p>
       `,
-    });
+    };
+
+    await transporter.sendMail(mailOptions);
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Download email error:", error);
+    console.error("Email send error:", error);
     return NextResponse.json({ success: false, error: "Failed to send email" }, { status: 500 });
   }
 }
