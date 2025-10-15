@@ -281,6 +281,7 @@ export default function CareerGuidePage() {
               </div>
             </div>
 
+            <a href="#explore">
             <Button
               size="lg"
               className="bg-tz-bright-orange hover:bg-tz-dark-orange text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
@@ -288,6 +289,7 @@ export default function CareerGuidePage() {
               Explore Free Guides
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
+            </a>
           </motion.div>
         </div>
       </section>
@@ -357,7 +359,7 @@ export default function CareerGuidePage() {
       </section>
 
       {/* Guides Grid */}
-      <section className="section-padding">
+      <section id="explore" className="section-padding">
         <div className="container-modern">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredGuides.map((guide, index) => (

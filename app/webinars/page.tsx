@@ -139,9 +139,10 @@ export default function WebinarsPage() {
       speaker: "Dr. Nisha Reddy",
       duration: "50 min",
       views: 1240,
-      thumbnail: "/placeholder.svg?height=200&width=350&text=Gen+AI",
+      thumbnail: "https://blog.coeruniversity.ac.in/wp-content/uploads/2024/02/Introduction-to-Generative-AI.jpg",
       isPremium: false,
       date: "Oct 15, 2025",
+      link:"youtube.com/@TechZnanieInnoversity",
     },
     {
       id: 2,
@@ -150,9 +151,10 @@ export default function WebinarsPage() {
       speaker: "Arun Patel",
       duration: "1h 20min",
       views: 890,
-      thumbnail: "/placeholder.svg?height=200&width=350&text=ML+Basics",
+      thumbnail: "https://images.codebasics.io/filters:format(webp)/images/1.1.419/courses/thumbnails/machine-learning-for-beginners.webp",
       isPremium: true,
       date: "Oct 8, 2025",
+      link:"https://lms.techznanieinnoversity.com/",
     },
     {
       id: 3,
@@ -161,9 +163,10 @@ export default function WebinarsPage() {
       speaker: "Rajesh Kumar",
       duration: "45 min",
       views: 2150,
-      thumbnail: "/placeholder.svg?height=200&width=350&text=React",
+      thumbnail: "https://miro.medium.com/0*syUfAfQ5v-51iAo1.png",
       isPremium: false,
       date: "Oct 1, 2025",
+      link:"youtube.com/@TechZnanieInnoversity",
     },
     {
       id: 4,
@@ -172,9 +175,10 @@ export default function WebinarsPage() {
       speaker: "Ankit Verma",
       duration: "1h 15min",
       views: 1560,
-      thumbnail: "/placeholder.svg?height=200&width=350&text=Scalable+Apps",
+      thumbnail: "https://miro.medium.com/v2/resize:fit:512/1*GaBtlHe240ZkwlcBrFczgQ.jpeg",
       isPremium: true,
       date: "Sep 24, 2025",
+      link:"https://lms.techznanieinnoversity.com/",
     },
     {
       id: 5,
@@ -183,9 +187,10 @@ export default function WebinarsPage() {
       speaker: "Priya Sharma",
       duration: "40 min",
       views: 3420,
-      thumbnail: "/placeholder.svg?height=200&width=350&text=Interview+Tips",
+      thumbnail: "https://5cc2b83c.delivery.rocketcdn.me/app/uploads/qualitative-interview-jpg.webp",
       isPremium: false,
       date: "Sep 17, 2025",
+      link:"youtube.com/@TechZnanieInnoversity",
     },
     {
       id: 6,
@@ -194,9 +199,10 @@ export default function WebinarsPage() {
       speaker: "Vikram Singh",
       duration: "55 min",
       views: 2780,
-      thumbnail: "/placeholder.svg?height=200&width=350&text=Resume+Guide",
+      thumbnail: "https://img-c.udemycdn.com/course/750x422/2504252_28c5_2.jpg",
       isPremium: true,
       date: "Sep 10, 2025",
+      link:"https://lms.techznanieinnoversity.com/",
     },
     {
       id: 7,
@@ -205,9 +211,10 @@ export default function WebinarsPage() {
       speaker: "Dr. Suresh Reddy",
       duration: "1h 10min",
       views: 670,
-      thumbnail: "/placeholder.svg?height=200&width=350&text=IoT+Basics",
+      thumbnail: "https://emteria.com/hs-fs/hubfs/blog_header_img/iot-embedded-system.webp?width=600&height=500&name=iot-embedded-system.webp",
       isPremium: false,
       date: "Sep 3, 2025",
+      link:"youtube.com/@TechZnanieInnoversity",
     },
     {
       id: 8,
@@ -216,9 +223,10 @@ export default function WebinarsPage() {
       speaker: "Meera Gupta",
       duration: "50 min",
       views: 890,
-      thumbnail: "/placeholder.svg?height=200&width=350&text=Industry+4.0",
+      thumbnail: "https://octopusdtl.com/wp-content/uploads/2024/04/Blog-12-inner-image-Industry-4.0-1-1024x655.png",
       isPremium: true,
       date: "Aug 27, 2025",
+      link:"https://lms.techznanieinnoversity.com/",
     },
   ]
 
@@ -589,6 +597,7 @@ export default function WebinarsPage() {
                     <span>{webinar.date}</span>
                   </div>
 
+                  <Link href={webinar.link}>
                   <Button
                     className={
                       webinar.isPremium ? "w-full bg-yellow-500 hover:bg-yellow-600 text-white" : "w-full btn-primary"
@@ -606,6 +615,7 @@ export default function WebinarsPage() {
                       </>
                     )}
                   </Button>
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -650,7 +660,7 @@ export default function WebinarsPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact">
+              <a href="https://lms.techznanieinnoversity.com/">
               <Button className="bg-white text-tz-dark-navy hover:bg-gray-100 text-lg px-8 py-6">
                 Enroll Now
                 <ChevronRight className="ml-2 w-5 h-5" />

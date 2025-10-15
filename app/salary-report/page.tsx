@@ -619,7 +619,7 @@ export default function SalaryReportsPage() {
                 variant="outline"
                 className="bg-white/10 hover:bg-white/20 text-white border-white/20 font-semibold px-8 py-6 rounded-xl transition-all duration-300"
               >
-                <Link href="/contact">Talk to Career Advisor</Link>
+                <Link href="7207276622">Talk to Career Advisor</Link>
               </Button>
             </div>
           </motion.div>
