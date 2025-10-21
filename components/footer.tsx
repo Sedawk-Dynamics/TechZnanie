@@ -213,16 +213,16 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-white/60 text-sm">© 2025 TechZnanie Innoversity. All rights reserved.</p>
             <div className="flex flex-wrap justify-center gap-6">
-              <Link href="#" className="text-white/60 hover:text-tz-bright-orange text-sm transition-colors">
+              <Link href="/privacy-policy" className="text-white/60 hover:text-tz-bright-orange text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-white/60 hover:text-tz-bright-orange text-sm transition-colors">
+              <Link href="/terms-of-service" className="text-white/60 hover:text-tz-bright-orange text-sm transition-colors">
                 Terms of Service
               </Link>
-              <Link href="#" className="text-white/60 hover:text-tz-bright-orange text-sm transition-colors">
+              <Link href="/cookie-policy" className="text-white/60 hover:text-tz-bright-orange text-sm transition-colors">
                 Cookie Policy
               </Link>
-              <Link href="#" className="text-white/60 hover:text-tz-bright-orange text-sm transition-colors">
+              <Link href="/refund-policy" className="text-white/60 hover:text-tz-bright-orange text-sm transition-colors">
                 Refund Policy
               </Link>
             </div>
