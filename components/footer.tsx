@@ -30,7 +30,6 @@ export default function Footer() {
     { name: "Salary Reports", href: "/salary-report" },
     { name: "Interview Prep", href: "/interview-prep" },
     { name: "Coding Challenges", href: "/coding-challenges" },
-    { name: "Tech News", href: "#" },
   ]
 
   const socialLinks = [
