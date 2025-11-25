@@ -1,12 +1,92 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, ArrowRight, Star } from "lucide-react"
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  ArrowRight,
+  Star,
+  X,
+  Bot,
+  Send,
+} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
 
 export default function Footer() {
+  // ---------- Chatbot State ----------
+  const [showChat, setShowChat] = useState(false)
+  const [messages, setMessages] = useState<{ sender: string; text: string }[]>([
+    {
+      sender: "bot",
+      text: "👋 Welcome to TechZnanie Innoversity — India’s Employability Engine. How can I assist you today?",
+    },
+  ])
+  const [input, setInput] = useState("")
+
+  // ---------- Chatbot Logic ----------
+  const handleChatSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!input.trim()) return
+
+    const userMessage = input.trim()
+    setMessages((prev) => [...prev, { sender: "user", text: userMessage }])
+    setInput("")
+
+    let reply = ""
+    const t = userMessage.toLowerCase()
+
+    if (t.includes("domain") || t.includes("course") || t.includes("program")) {
+      reply = `We offer 58+ upskilling programs across multiple streams:\n
+A. Technology: Full Stack, Data Science, AI, Cybersecurity, Cloud, DevOps\n
+B. Management: Sales, Product, HR, Marketing\n
+C. Engineering: Civil, Mechanical, Electrical, Electronics\n
+D. Finance: Tally, GST, Investment Banking\n
+E. Creative: UI/UX, Graphic Design, Digital Marketing\n
+Would you like to view course details or book a demo session?`
+    } else if (t.includes("fee") || t.includes("price") || t.includes("admission")) {
+      reply = `💰 Program Fee: ₹21,999 (Inclusive of LMS, mentor sessions & certification)\n
+✅ Token Fee: ₹3,000 (Non-refundable)\n
+No EMI / Installments.\n
+Admission Steps:\n1️⃣ Choose Domain\n2️⃣ Pay Token\n3️⃣ Submit Onboarding Form\n4️⃣ Receive LMS Login\n5️⃣ Start Training`
+    } else if (t.includes("placement") || t.includes("job")) {
+      reply = `🎯 Our Placement Cell supports you with:\n
+✅ Resume & LinkedIn Optimization\n✅ Mock Interviews (Tech + HR)\n✅ Portfolio Setup (GitHub, Dashboards)\n✅ Job Referral Support (Performance-based)\n
+Would you like to speak to the placement team or view the roadmap?`
+    } else if (t.includes("demo")) {
+      reply = `🧑‍🏫 We offer Free 20–30 minute demo sessions for all domains.\n
+Please share:\n• Full Name\n• Phone Number\n• Email\n• Domain of Interest\n• Preferred Date & Time\n
+Once submitted, our team will confirm your session.`
+    } else if (t.includes("career")) {
+      reply = `🎯 Not sure which career suits you?\nSelect your goal:\n• IT Career Path\n• Management Career Path\n• Engineering Career Path\n• Finance Career Path\n• Creative Career Path`
+    } else if (t.includes("college")) {
+      reply = `🏫 We collaborate with colleges for:\n✅ On-Campus Workshops\n✅ Faculty Training\n✅ Job-Ready Bootcamps\n✅ Co-branded Certificates\n\nPlease share:\n• College Name\n• Contact Person\n• Email\n• Required Domains`
+    } else if (t.includes("mentor") || t.includes("trainer") || t.includes("partner")) {
+      reply = `🤝 We're onboarding Training Partners!\n\nModel:\n₹6,000 per student enrollment\n25–30 students per batch\n\nShare:\n• Name\n• Organization\n• Domains\n• Contact Number\n• Email`
+    } else if (t.includes("lms")) {
+      reply = `💻 LMS Support Options:\n• Reset Password\n• Re-send Login Details\n• Report Issue\n• Talk to LMS Support`
+    } else if (t.includes("contact") || t.includes("support")) {
+      reply = `📞 +91-7207276622\n📩 support@techznanieinnoversity.com\n🕓 10 AM – 7 PM (Mon–Sat)\nWould you like to speak to a counsellor?`
+    } else if (t.includes("hello") || t.includes("hi")) {
+      reply = `Hello 👋! I can help you explore:\n• Courses\n• Fees & Admission\n• Placements\n• Demo Sessions\n• College or Mentor Collaborations`
+    } else {
+      reply = `I'm here to help you with:\n• Explore Domains\n• Fees & Admission\n• Placement Support\n• Demo Session\n• LMS Help\n• College / Mentor Partnerships`
+    }
+
+    setTimeout(() => {
+      setMessages((prev) => [...prev, { sender: "bot", text: reply }])
+    }, 700)
+  }
+
+  // ---------- Footer Data ----------
   const quickLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
@@ -70,8 +150,6 @@ export default function Footer() {
                 <span className="text-white/80 ml-2">Trusted by 500+ professionals</span>
               </div>
             </div>
-            
-            
           </div>
         </motion.div>
 
@@ -132,73 +210,9 @@ export default function Footer() {
             </motion.div>
 
             {/* Quick Links */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <h4 className="text-lg font-bold mb-6 text-tz-cream">Quick Links</h4>
-              <ul className="space-y-3">
-                {quickLinks.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-white/80 hover:text-tz-bright-orange transition-colors flex items-center group"
-                    >
-                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            {/* Programs */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h4 className="text-lg font-bold mb-6 text-tz-cream">Programs</h4>
-              <ul className="space-y-3">
-                {programs.map((program) => (
-                  <li key={program.name}>
-                    <Link
-                      href={program.href}
-                      className="text-white/80 hover:text-tz-bright-orange transition-colors text-sm flex items-center group"
-                    >
-                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {program.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            {/* Resources */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <h4 className="text-lg font-bold mb-6 text-tz-cream">Resources</h4>
-              <ul className="space-y-3">
-                {resources.map((resource) => (
-                  <li key={resource.name}>
-                    <Link
-                      href={resource.href}
-                      className="text-white/80 hover:text-tz-bright-orange transition-colors text-sm flex items-center group"
-                    >
-                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {resource.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            <FooterColumn title="Quick Links" items={quickLinks} delay={0.1} />
+            <FooterColumn title="Programs" items={programs} delay={0.2} />
+            <FooterColumn title="Resources" items={resources} delay={0.3} />
           </div>
         </div>
 
@@ -229,6 +243,130 @@ export default function Footer() {
           </div>
         </motion.div>
       </div>
+
+      {/* ✅ WhatsApp Floating Button */}
+      <motion.a
+        href="https://wa.me/917207276622?text=Hi%20I%20visited%20TechZnanie%20and%20want%20to%20learn%20more%20about%20your%20courses!"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 group"
+        aria-label="Chat on WhatsApp"
+        animate={{ y: [0, -5, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <div className="bg-[#25D366] p-4 rounded-full shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+            className="w-10 h-10"
+          />
+        </div>
+      </motion.a>
+
+      {/* ✅ Floating Chatbot Button */}
+      <motion.div
+        className="fixed bottom-24 right-6 z-50"
+        animate={{ y: [0, -5, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <button
+          onClick={() => setShowChat((prev) => !prev)}
+          className="bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300"
+          aria-label="Open Chatbot"
+        >
+          <Bot className="w-6 h-6" />
+        </button>
+      </motion.div>
+
+      {/* ✅ Chatbot Popup */}
+      <AnimatePresence>
+        {showChat && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.3 }}
+            className="fixed bottom-28 right-6 w-80 bg-white shadow-2xl rounded-2xl overflow-hidden z-50 border border-gray-200"
+          >
+            <div className="bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange p-4 text-white flex justify-between items-center">
+              <h4 className="font-semibold">TechZnanie Assistant</h4>
+              <button onClick={() => setShowChat(false)}>
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="h-64 overflow-y-auto p-4 space-y-3 text-sm bg-gray-50">
+              {messages.map((msg, index) => (
+                <div
+                  key={index}
+                  className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}
+                >
+                  <div
+                    className={`p-3 rounded-lg max-w-[80%] whitespace-pre-line ${
+                      msg.sender === "user"
+                        ? "bg-tz-bright-orange text-white rounded-br-none"
+                        : "bg-gray-200 text-gray-800 rounded-bl-none"
+                    }`}
+                  >
+                    {msg.text}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <form onSubmit={handleChatSubmit} className="p-3 border-t border-gray-200 bg-white flex space-x-2">
+              <Input
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Type a message..."
+                className="flex-1 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-tz-bright-orange"
+              />
+              <Button
+                type="submit"
+                className="bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange text-white px-3 py-2 rounded-lg hover:opacity-90 transition"
+              >
+                <Send className="w-4 h-4" />
+              </Button>
+            </form>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </footer>
+  )
+}
+
+// ✅ Reusable FooterColumn component
+function FooterColumn({
+  title,
+  items,
+  delay = 0,
+}: {
+  title: string
+  items: { name: string; href: string }[]
+  delay?: number
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay }}
+      viewport={{ once: true }}
+    >
+      <h4 className="text-lg font-bold mb-6 text-tz-cream">{title}</h4>
+      <ul className="space-y-3">
+        {items.map((item) => (
+          <li key={item.name}>
+            <Link
+              href={item.href}
+              className="text-black/80 hover:text-tz-bright-orange transition-colors flex items-center group"
+            >
+              <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+              {item.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </motion.div>
   )
 }
