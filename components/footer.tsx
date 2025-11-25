@@ -315,20 +315,23 @@ Once submitted, our team will confirm your session.`
             </div>
 
             <form onSubmit={handleChatSubmit} className="p-3 border-t border-gray-200 bg-white flex space-x-2">
-              <Input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="Type a message..."
-                className="flex-1 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-tz-bright-orange"
-              />
-              <Button
-                type="submit"
-                className="bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange text-white px-3 py-2 rounded-lg hover:opacity-90 transition"
-              >
-                <Send className="w-4 h-4" />
-              </Button>
-            </form>
+  <Input
+    type="text"
+    value={input}
+    onChange={(e) => setInput(e.target.value)}
+    placeholder="Type a message..."
+    className="flex-1 border rounded-lg px-3 py-2 text-sm 
+               text-black placeholder-gray-500
+               focus:outline-none focus:ring-2 focus:ring-tz-bright-orange"
+  />
+
+  <Button
+    type="submit"
+    className="bg-gradient-to-r from-tz-bright-orange to-tz-dark-orange text-white px-3 py-2 rounded-lg hover:opacity-90 transition"
+  >
+    <Send className="w-4 h-4" />
+  </Button>
+</form>
           </motion.div>
         )}
       </AnimatePresence>
